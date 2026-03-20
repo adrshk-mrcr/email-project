@@ -1,0 +1,9 @@
+{
+  "name": "email-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview:build": "node src/render-previews.js",
+    "send:test": "node src/send-test.js"
+  }
+}

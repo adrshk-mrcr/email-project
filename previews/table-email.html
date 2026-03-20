@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <title>Your wallet was topped up with BTC</title>
+    <style>
+      html,
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      body {
+        background-color: #efefef;
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      img {
+        border: 0;
+        display: block;
+        line-height: 100%;
+        max-width: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .email-page {
+        background-color: #efefef;
+        padding: 24px 12px;
+      }
+
+      .email-shell {
+        width: 100%;
+        max-width: 532px;
+        background-color: #fcfaf8;
+        border-radius: 24px;
+      }
+
+      .email-inner {
+        padding: 24px 16px 64px;
+      }
+
+      .email-logo {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 22px;
+        line-height: 1;
+        color: #171513;
+        padding-bottom: 56px;
+      }
+
+      .email-title {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #171513;
+      }
+
+      .email-text {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 22px;
+        color: #171513;
+      }
+
+      .email-muted {
+        color: #5f5a55;
+      }
+
+      .email-primary {
+        color: #171513;
+      }
+
+      .email-link {
+        color: #2e52d1;
+      }
+
+      .email-surface {
+        background-color: #f2ede8;
+        border-radius: 24px;
+      }
+
+      .email-divider {
+        border-top: 1px solid #d6cec5;
+      }
+
+      .email-chip {
+        background-color: #eee7e0;
+        border-radius: 24px;
+      }
+
+      .email-button {
+        background-color: #10b981;
+        border-radius: 16px;
+        color: #ffffff;
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 15px;
+        padding: 14px 24px;
+      }
+
+      .email-preheader {
+        display: none;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+      }
+
+      .stack-column,
+      .stack-column-cell {
+        display: table-cell;
+      }
+
+      
+    @media (prefers-color-scheme: dark) {
+      body,
+      .email-page {
+        background-color: #111111 !important;
+      }
+
+      .email-shell {
+        background-color: #181614 !important;
+      }
+
+      .email-text,
+      .email-text a,
+      .email-title,
+      .email-primary {
+        color: #f5efe9 !important;
+      }
+
+      .email-muted {
+        color: #d0c6bd !important;
+      }
+
+      .email-surface,
+      .email-chip {
+        background-color: #2a2521 !important;
+      }
+
+      .email-divider,
+      .email-rule {
+        border-color: #4d443d !important;
+      }
+
+      .email-link {
+        color: #8ea7ff !important;
+      }
+
+      .email-button {
+        background-color: #10b981 !important;
+        color: #ffffff !important;
+      }
+    }
+
+    [data-ogsc] .email-page,
+    [data-ogsc] body {
+      background-color: #111111 !important;
+    }
+
+    [data-ogsc] .email-shell {
+      background-color: #181614 !important;
+    }
+
+    [data-ogsc] .email-text,
+    [data-ogsc] .email-title,
+    [data-ogsc] .email-primary {
+      color: #f5efe9 !important;
+    }
+
+    [data-ogsc] .email-muted {
+      color: #d0c6bd !important;
+    }
+
+    [data-ogsc] .email-surface,
+    [data-ogsc] .email-chip {
+      background-color: #2a2521 !important;
+    }
+
+    [data-ogsc] .email-divider,
+    [data-ogsc] .email-rule {
+      border-color: #4d443d !important;
+    }
+
+    [data-ogsc] .email-link {
+      color: #8ea7ff !important;
+    }
+  
+
+      @media screen and (max-width: 600px) {
+        .email-page {
+          padding: 0 !important;
+        }
+
+        .email-shell {
+          border-radius: 24px !important;
+        }
+
+        .email-inner {
+          padding: 32px 16px 64px !important;
+        }
+
+        .fluid {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .stack-column,
+        .stack-column-cell {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .mobile-center {
+          text-align: center !important;
+        }
+
+        .mobile-left {
+          text-align: left !important;
+        }
+
+        .mobile-padding-reset {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-preheader">Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.</div>
+    <table role="presentation" width="100%" class="email-page" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" class="email-shell" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td class="email-inner">
+                
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="email-logo">mercuryo</td>
+        </tr>
+        <tr>
+          <td class="email-title" style="padding-bottom: 12px;">Your wallet was topped up with BTC</td>
+        </tr>
+        <tr>
+          <td class="email-text email-primary" style="padding-bottom: 24px;">Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.</td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 24px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-surface">
+              <tr>
+                <td style="padding: 24px 16px 20px 16px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td class="email-muted stack-column-cell" style="font-family: Arial, sans-serif; font-size: 17px; line-height: 1; font-weight: 600; padding-bottom: 24px;">Your order</td>
+                      <td class="email-muted stack-column-cell mobile-left" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1; text-align: right; padding-bottom: 24px;">12 Mar 2020, 13:15</td>
+                    </tr>
+                    
+    <tr>
+      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; ">Amount</td>
+      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; ">1.50744474 BTC</td>
+    </tr>
+  
+                    
+    <tr>
+      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; border-top: 1px solid #d6cec5;">Fee</td>
+      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; border-top: 1px solid #d6cec5;">€34.21</td>
+    </tr>
+  
+                    
+    <tr>
+      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; ">Total</td>
+      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; ">€903.12</td>
+    </tr>
+  
+                    
+    <tr>
+      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; border-top: 1px solid #d6cec5;">To</td>
+      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 13px; line-height: 15px; border-top: 1px solid #d6cec5;">BTC wallet: 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx</td>
+    </tr>
+  
+                    
+    <tr>
+      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; ">Mercuryo ID:</td>
+      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; ">5d35ghuafg9345x34</td>
+    </tr>
+  
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="email-text email-primary">The coins will be accrued immediately after 6 confirmations in Bitcoin network.</td>
+        </tr>
+        <tr>
+          <td style="padding-top: 32px; padding-bottom: 8px; font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; font-weight: 700; color: #171513;">Did you enjoy Mercuryo?</td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 12px;">
+            <a href="https://mercuryo.io" class="email-button">Share your expirience</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="email-text email-primary" style="font-size: 13px; line-height: 15px;">Trustpilot</td>
+        </tr>
+        <tr>
+          <td>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="email-divider" style="padding-top: 40px;"></td>
+      </tr>
+      <tr>
+        <td style="padding-top: 24px;">
+          <p class="email-text email-muted">
+            Puedes ponerte en contacto con nuestro equipo de atención al cliente, disponible 24/7.
+            Escríbenos a través del chat en vivo en la parte inferior de
+            <a class="email-link" href="https://mercuryo.io">mercuryo.io</a>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 12px;">
+          <p class="email-text email-muted">
+            ¿Demasiadas notificaciones?
+            <a class="email-link" href="https://mercuryo.io">Cuéntanos tu opinión para ayudarnos a mejorarlas</a>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 24px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">Mercuryo.io</td>
+              <td style="width: 6px;"></td>
+              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">Centro de aprendizaje</td>
+              <td style="width: 6px;"></td>
+              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">LinkedIn</td>
+              <td style="width: 6px;"></td>
+              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">X</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+        </tr>
+      </table>
+    
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
