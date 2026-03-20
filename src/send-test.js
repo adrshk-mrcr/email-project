@@ -18,14 +18,15 @@ const recipients = [
 const from = process.env.EMAIL_FROM || 'onboarding@resend.dev';
 
 async function main() {
+  const subjectPrefix = process.env.SUBJECT_PREFIX ? `${process.env.SUBJECT_PREFIX} ` : '';
   const messages = [
     {
-      subject: 'Test: Authentication code email',
-      html: renderCodeEmail()
+      subject: `${subjectPrefix}Test: Authentication code email`,
+      ...renderCodeEmail()
     },
     {
-      subject: 'Test: Wallet topped up email',
-      html: renderTableEmail()
+      subject: `${subjectPrefix}Test: Wallet topped up email`,
+      ...renderTableEmail()
     }
   ];
 
@@ -34,7 +35,8 @@ async function main() {
       from,
       to: recipients,
       subject: message.subject,
-      html: message.html
+      html: message.html,
+      attachments: message.attachments
     });
 
     console.log(`${message.subject}: ${result.id}`);

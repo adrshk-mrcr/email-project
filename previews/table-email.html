@@ -13,18 +13,17 @@
       body {
         margin: 0 !important;
         padding: 0 !important;
-        min-width: 100% !important;
         width: 100% !important;
-        height: 100% !important;
+        min-width: 100% !important;
       }
 
       body {
-        background-color: #efefef;
+        background-color: #ffffff;
       }
 
       table {
-        border-spacing: 0;
         border-collapse: collapse;
+        border-spacing: 0;
       }
 
       td {
@@ -35,7 +34,6 @@
         border: 0;
         display: block;
         line-height: 100%;
-        max-width: 100%;
         outline: none;
         text-decoration: none;
       }
@@ -44,39 +42,38 @@
         margin: 0;
       }
 
-      a {
-        text-decoration: none;
+      .email-preheader {
+        display: none !important;
+        max-height: 0 !important;
+        max-width: 0 !important;
+        opacity: 0 !important;
+        overflow: hidden !important;
+        mso-hide: all !important;
       }
 
-      .email-page {
-        background-color: #efefef;
-        padding: 24px 12px;
+      .email-root {
+        background-color: #ffffff;
       }
 
-      .email-shell {
-        width: 100%;
-        max-width: 532px;
-        background-color: #fcfaf8;
+      .email-card {
+        width: 532px;
+        background-color: #ffffff;
         border-radius: 24px;
       }
 
       .email-inner {
-        padding: 24px 16px 64px;
+        padding: 0 56px 64px 16px;
       }
 
-      .email-logo {
-        font-family: Georgia, 'Times New Roman', serif;
-        font-size: 22px;
-        line-height: 1;
-        color: #171513;
-        padding-bottom: 56px;
+      .email-inner-mobile {
+        padding: 0 16px 64px 16px;
       }
 
       .email-title {
         font-family: Arial, sans-serif;
         font-size: 24px;
-        line-height: 1.2;
-        font-weight: 600;
+        line-height: 29px;
+        font-weight: 500;
         color: #171513;
       }
 
@@ -87,25 +84,31 @@
         color: #171513;
       }
 
-      .email-muted {
-        color: #5f5a55;
+      .email-caption {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 15px;
       }
 
       .email-primary {
         color: #171513;
       }
 
+      .email-secondary {
+        color: #707070;
+      }
+
+      .email-chip-text {
+        color: #5f5a55;
+      }
+
       .email-link {
         color: #2e52d1;
+        text-decoration: none;
       }
 
       .email-surface {
         background-color: #f2ede8;
-        border-radius: 24px;
-      }
-
-      .email-divider {
-        border-top: 1px solid #d6cec5;
       }
 
       .email-chip {
@@ -113,52 +116,48 @@
         border-radius: 24px;
       }
 
+      .email-divider {
+        border-top: 1px solid #d6cec5;
+      }
+
       .email-button {
-        background-color: #10b981;
-        border-radius: 16px;
-        color: #ffffff;
         display: inline-block;
+        padding: 10px 21px 11px 21px;
+        background-color: #00b478;
+        border-radius: 12px;
+        color: #ffffff;
         font-family: Arial, sans-serif;
         font-size: 13px;
-        font-weight: 700;
         line-height: 15px;
-        padding: 14px 24px;
+        font-weight: 700;
+        text-decoration: none;
       }
 
-      .email-preheader {
+      .mobile-only {
         display: none;
         max-height: 0;
-        max-width: 0;
-        opacity: 0;
         overflow: hidden;
-        mso-hide: all;
-        visibility: hidden;
-      }
-
-      .stack-column,
-      .stack-column-cell {
-        display: table-cell;
       }
 
       
     @media (prefers-color-scheme: dark) {
       body,
-      .email-page {
+      .email-root {
         background-color: #111111 !important;
       }
 
-      .email-shell {
+      .email-card {
         background-color: #181614 !important;
       }
 
-      .email-text,
-      .email-text a,
+      .email-primary,
+      .email-primary a,
       .email-title,
-      .email-primary {
+      .email-text {
         color: #f5efe9 !important;
       }
 
-      .email-muted {
+      .email-secondary {
         color: #d0c6bd !important;
       }
 
@@ -167,8 +166,7 @@
         background-color: #2a2521 !important;
       }
 
-      .email-divider,
-      .email-rule {
+      .email-divider {
         border-color: #4d443d !important;
       }
 
@@ -177,27 +175,27 @@
       }
 
       .email-button {
-        background-color: #10b981 !important;
+        background-color: #00b478 !important;
         color: #ffffff !important;
       }
     }
 
-    [data-ogsc] .email-page,
-    [data-ogsc] body {
+    [data-ogsc] body,
+    [data-ogsc] .email-root {
       background-color: #111111 !important;
     }
 
-    [data-ogsc] .email-shell {
+    [data-ogsc] .email-card {
       background-color: #181614 !important;
     }
 
-    [data-ogsc] .email-text,
+    [data-ogsc] .email-primary,
     [data-ogsc] .email-title,
-    [data-ogsc] .email-primary {
+    [data-ogsc] .email-text {
       color: #f5efe9 !important;
     }
 
-    [data-ogsc] .email-muted {
+    [data-ogsc] .email-secondary {
       color: #d0c6bd !important;
     }
 
@@ -206,8 +204,7 @@
       background-color: #2a2521 !important;
     }
 
-    [data-ogsc] .email-divider,
-    [data-ogsc] .email-rule {
+    [data-ogsc] .email-divider {
       border-color: #4d443d !important;
     }
 
@@ -217,133 +214,125 @@
   
 
       @media screen and (max-width: 600px) {
-        .email-page {
-          padding: 0 !important;
+        .desktop-only {
+          display: none !important;
+          max-height: 0 !important;
+          overflow: hidden !important;
         }
 
-        .email-shell {
-          border-radius: 24px !important;
+        .mobile-only {
+          display: block !important;
+          max-height: none !important;
+          overflow: visible !important;
+        }
+
+        .email-card {
+          width: 390px !important;
         }
 
         .email-inner {
-          padding: 32px 16px 64px !important;
+          padding: 0 16px 64px 16px !important;
         }
 
-        .fluid {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-
-        .stack-column,
-        .stack-column-cell {
+        .mobile-stack,
+        .mobile-stack td {
           display: block !important;
           width: 100% !important;
-          max-width: 100% !important;
-        }
-
-        .mobile-center {
-          text-align: center !important;
-        }
-
-        .mobile-left {
           text-align: left !important;
-        }
-
-        .mobile-padding-reset {
-          padding-left: 0 !important;
-          padding-right: 0 !important;
         }
       }
     </style>
   </head>
   <body>
     <div class="email-preheader">Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.</div>
-    <table role="presentation" width="100%" class="email-page" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td align="center">
-          <table role="presentation" width="100%" class="email-shell" cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <td class="email-inner">
-                
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    
+    <div style="position:relative; width:532px; background-color:#ffffff; border-radius:24px; overflow:hidden;">
+      <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-decor.png" alt="" width="360" height="360" style="display:block; position:absolute; top:-96px; right:-95px; width:360px; height:360px;" />
+      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="position:relative; z-index:1;">
         <tr>
-          <td class="email-logo">mercuryo</td>
-        </tr>
-        <tr>
-          <td class="email-title" style="padding-bottom: 12px;">Your wallet was topped up with BTC</td>
-        </tr>
-        <tr>
-          <td class="email-text email-primary" style="padding-bottom: 24px;">Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.</td>
-        </tr>
-        <tr>
-          <td style="padding-bottom: 24px;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-surface">
+          <td class="email-inner">
+            <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td style="padding: 24px 16px 20px 16px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <td style="padding-top:24px; padding-bottom:56px;">
+                  <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-logo.png" alt="mercuryo" width="114" height="16" style="display:block;" />
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom:12px;" class="email-title">Your wallet was topped up with BTC</td>
+              </tr>
+              <tr>
+                <td style="padding-top:4px; padding-bottom:8px;" class="email-text email-primary">Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.</td>
+              </tr>
+              <tr>
+                <td style="padding-top:24px; padding-bottom:32px; padding-right:40px;">
+                  <table role="presentation" width="420" cellpadding="0" cellspacing="0" border="0" class="email-surface" style="border-radius:24px;">
                     <tr>
-                      <td class="email-muted stack-column-cell" style="font-family: Arial, sans-serif; font-size: 17px; line-height: 1; font-weight: 600; padding-bottom: 24px;">Your order</td>
-                      <td class="email-muted stack-column-cell mobile-left" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1; text-align: right; padding-bottom: 24px;">12 Mar 2020, 13:15</td>
+                      <td style="padding:24px 32px 20px;">
+                        <table role="presentation" width="356" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td class="email-secondary" style="font-family:Arial,sans-serif; font-size:17px; line-height:17px; font-weight:600; padding-bottom:24px;">Your order</td>
+                            <td class="email-secondary" style="font-family:Arial,sans-serif; font-size:16px; line-height:16px; text-align:right; padding-bottom:24px;">12 Mar 2020, 13:15</td>
+                          </tr>
+                          <tr>
+                            <td class="email-text email-chip-text" style="padding:8px 0;">Amount</td>
+                            <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">1.50744474 BTC</td>
+                          </tr>
+                          <tr>
+                            <td class="email-text email-chip-text" style="padding:8px 0; border-top:1px solid #e5e5e5;">Fee</td>
+                            <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px; border-top:1px solid #e5e5e5;">€34.21</td>
+                          </tr>
+                          <tr>
+                            <td class="email-text email-chip-text" style="padding:8px 0;">Total</td>
+                            <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">€903.12</td>
+                          </tr>
+                          <tr>
+                            <td class="email-text email-chip-text" style="padding:8px 0; border-top:1px solid #e5e5e5;">To</td>
+                            <td class="email-caption email-primary" style="padding:8px 0; text-align:right; border-top:1px solid #e5e5e5;">BTC wallet: 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx</td>
+                          </tr>
+                          <tr>
+                            <td class="email-text email-chip-text" style="padding:8px 0;">Mercuryo ID:</td>
+                            <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">5d35ghuafg9345x34</td>
+                          </tr>
+                        </table>
+                      </td>
                     </tr>
-                    
-    <tr>
-      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; ">Amount</td>
-      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; ">1.50744474 BTC</td>
-    </tr>
-  
-                    
-    <tr>
-      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; border-top: 1px solid #d6cec5;">Fee</td>
-      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; border-top: 1px solid #d6cec5;">€34.21</td>
-    </tr>
-  
-                    
-    <tr>
-      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; ">Total</td>
-      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; ">€903.12</td>
-    </tr>
-  
-                    
-    <tr>
-      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; border-top: 1px solid #d6cec5;">To</td>
-      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 13px; line-height: 15px; border-top: 1px solid #d6cec5;">BTC wallet: 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx</td>
-    </tr>
-  
-                    
-    <tr>
-      <td class="email-text email-muted stack-column-cell" style="padding: 8px 0; ">Mercuryo ID:</td>
-      <td class="email-text email-primary stack-column-cell mobile-left" style="padding: 8px 0; text-align: right; font-size: 16px; line-height: 24px; ">5d35ghuafg9345x34</td>
-    </tr>
-  
                   </table>
                 </td>
               </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td class="email-text email-primary">The coins will be accrued immediately after 6 confirmations in Bitcoin network.</td>
-        </tr>
-        <tr>
-          <td style="padding-top: 32px; padding-bottom: 8px; font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; font-weight: 700; color: #171513;">Did you enjoy Mercuryo?</td>
-        </tr>
-        <tr>
-          <td style="padding-bottom: 12px;">
-            <a href="https://mercuryo.io" class="email-button">Share your expirience</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="email-text email-primary" style="font-size: 13px; line-height: 15px;">Trustpilot</td>
-        </tr>
-        <tr>
-          <td>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td class="email-text email-primary" style="padding-top:4px; padding-bottom:8px;">The coins will be accrued immediately after 6 confirmations in Bitcoin network.</td>
+              </tr>
+              <tr>
+                <td style="padding-top:32px; padding-bottom:12px;" class="email-caption email-primary">Did you enjoy Mercuryo?</td>
+              </tr>
+              <tr>
+                <td style="padding-bottom:8px;"><a href="https://mercuryo.io" class="email-button">Share your expirience</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="padding-right:8px;">
+                        <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-trustpilot-logo.png" alt="Trustpilot" width="83" height="20" style="display:block;" />
+                      </td>
+                      <td>
+                        <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-trustpilot-rating.png" alt="" width="88" height="17" style="display:block;" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:40px;">
       <tr>
-        <td class="email-divider" style="padding-top: 40px;"></td>
+        <td style="padding-bottom:24px;">
+          <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-divider.png" alt="" width="460" style="display:block; width:460px; max-width:none;" />
+        </td>
       </tr>
       <tr>
-        <td style="padding-top: 24px;">
-          <p class="email-text email-muted">
+        <td style="padding-bottom:12px;">
+          <p class="email-caption email-secondary">
             Puedes ponerte en contacto con nuestro equipo de atención al cliente, disponible 24/7.
             Escríbenos a través del chat en vivo en la parte inferior de
             <a class="email-link" href="https://mercuryo.io">mercuryo.io</a>
@@ -351,38 +340,46 @@
         </td>
       </tr>
       <tr>
-        <td style="padding-top: 12px;">
-          <p class="email-text email-muted">
+        <td style="padding-bottom:20px;">
+          <p class="email-caption email-secondary">
             ¿Demasiadas notificaciones?
-            <a class="email-link" href="https://mercuryo.io">Cuéntanos tu opinión para ayudarnos a mejorarlas</a>
+            <a class="email-link" href="https://mercuryo.io">Cuéntanos tu opinión</a>
+            <a class="email-link" href="https://mercuryo.io" style="color:#344dcf;"> para ayudarnos a mejorarlas</a>
           </p>
         </td>
       </tr>
       <tr>
-        <td style="padding-top: 24px;">
+        <td>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
             <tr>
-              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">Mercuryo.io</td>
-              <td style="width: 6px;"></td>
-              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">Centro de aprendizaje</td>
-              <td style="width: 6px;"></td>
-              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">LinkedIn</td>
-              <td style="width: 6px;"></td>
-              <td class="email-chip email-muted" style="font-family: Arial, sans-serif; font-size: 13px; line-height: 15px; padding: 8px 12px;">X</td>
+              <td class="email-chip" style="padding:4px 12px 4px 4px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding-right:6px;">
+                      <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-chip-icon.png" alt="" width="20" height="20" style="display:block;" />
+                    </td>
+                    <td class="email-caption email-chip-text">Mercuryo.io</td>
+                  </tr>
+                </table>
+              </td>
+              <td style="width:6px;"></td>
+              <td class="email-chip email-chip-text email-caption" style="padding:8px 12px;">Centro de aprendizaje</td>
+              <td style="width:6px;"></td>
+              <td><img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-linkedin.png" alt="LinkedIn" width="28" height="28" style="display:block;" /></td>
+              <td style="width:6px;"></td>
+              <td><img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-x.png" alt="X" width="29" height="28" style="display:block;" /></td>
             </tr>
           </table>
         </td>
       </tr>
     </table>
   </td>
+              </tr>
+            </table>
+          </td>
         </tr>
       </table>
-    
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
+    </div>
+  
   </body>
 </html>

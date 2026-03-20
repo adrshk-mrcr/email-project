@@ -7,8 +7,8 @@ const previewsDir = path.resolve(process.cwd(), 'previews');
 
 fs.mkdirSync(previewsDir, { recursive: true });
 
-fs.writeFileSync(path.join(previewsDir, 'code-email.html'), renderCodeEmail(), 'utf8');
-fs.writeFileSync(path.join(previewsDir, 'table-email.html'), renderTableEmail(), 'utf8');
+fs.writeFileSync(path.join(previewsDir, 'code-email.html'), renderCodeEmail().html, 'utf8');
+fs.writeFileSync(path.join(previewsDir, 'table-email.html'), renderTableEmail().html, 'utf8');
 
 console.log('Rendered previews:');
 console.log(path.join(previewsDir, 'code-email.html'));

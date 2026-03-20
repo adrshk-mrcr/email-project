@@ -1,6 +1,6 @@
 const RESEND_ENDPOINT = 'https://api.resend.com/emails';
 
-export async function sendEmail({ from, to, subject, html }) {
+export async function sendEmail({ from, to, subject, html, attachments = [] }) {
   const apiKey = process.env.RESEND_API_KEY;
 
   if (!apiKey) {
@@ -17,7 +17,8 @@ export async function sendEmail({ from, to, subject, html }) {
       from,
       to,
       subject,
-      html
+      html,
+      attachments
     })
   });
 

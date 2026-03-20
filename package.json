@@ -3,7 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "assets:prepare": "node scripts/prepare-assets.js",
     "preview:build": "node src/render-previews.js",
     "send:test": "node src/send-test.js"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
   }
 }
