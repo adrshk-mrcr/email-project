@@ -3,11 +3,11 @@ import { assetUrl } from '../lib/asset-base-url.js';
 
 const ASSETS = {
   logo: assetUrl('table-logo.png'),
-  divider: assetUrl('table-divider.png'),
-  chipIcon: assetUrl('table-chip-icon.png?v=2'),
-  linkedin: assetUrl('table-linkedin-glyph.png?v=3'),
-  x: assetUrl('table-x-glyph.png?v=3'),
-  decor: assetUrl('table-decor.png'),
+  logoDark: assetUrl('table-logo-dark.png'),
+  chipIcon: assetUrl('merc-foote.png'),
+  linkedin: assetUrl('in-footer.png'),
+  x: assetUrl('X-footer.png'),
+  decor: assetUrl('Star.png'),
   trustpilotRating: assetUrl('table-trustpilot-rating-raw.png?v=2'),
   trustpilotStar: assetUrl('trustpilot-star-only.png?v=2')
 };
@@ -42,28 +42,28 @@ function renderFooter() {
         <td>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
             <tr>
-              <td class="email-chip" style="padding:4px 12px 4px 4px;">
+              <td class="email-chip" bgcolor="#eee7e0" style="padding:4px 12px 4px 4px; background-color:#eee7e0; border-radius:24px;">
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                   <tr>
                     <td style="padding-right:6px;">
-                      <img src="${ASSETS.chipIcon}" alt="" width="20" height="20" style="display:block;" />
+                      <img src="${ASSETS.chipIcon}" alt="" width="20" height="20" style="display:block; width:20px; height:20px;" />
                     </td>
                     <td class="email-caption email-chip-text">Mercuryo.io</td>
                   </tr>
                 </table>
               </td>
               <td style="width:6px;"></td>
-              <td class="email-chip email-chip-text email-caption" style="padding:8px 12px;">Centro de aprendizaje</td>
+              <td class="email-chip email-chip-text email-caption" bgcolor="#eee7e0" style="padding:8px 12px; background-color:#eee7e0; border-radius:24px;">Centro de aprendizaje</td>
               <td style="width:6px;"></td>
-              <td>
-                <a href="https://www.linkedin.com/company/mercuryo/" class="email-social-link" aria-label="LinkedIn">
-                  <img src="${ASSETS.linkedin}" alt="LinkedIn" width="28" height="28" class="email-social-icon" style="display:block;" />
+              <td class="email-social-chip" bgcolor="#eee7e0" style="width:28px; height:28px; background-color:#eee7e0; border-radius:14px; text-align:center;">
+                <a href="https://www.linkedin.com/company/mercuryo/" class="email-social-link" aria-label="LinkedIn" style="display:inline-block; width:28px; height:28px; text-decoration:none; line-height:28px;">
+                  <img src="${ASSETS.linkedin}" alt="LinkedIn" width="14" height="14" class="email-social-icon" style="display:block; width:14px; height:14px; margin:7px auto;" />
                 </a>
               </td>
               <td style="width:6px;"></td>
-              <td>
-                <a href="https://x.com/Mercuryo_io" class="email-social-link" aria-label="X">
-                  <img src="${ASSETS.x}" alt="X" width="29" height="28" class="email-social-icon" style="display:block;" />
+              <td class="email-social-chip" bgcolor="#eee7e0" style="width:31px; height:28px; background-color:#eee7e0; border-radius:14px; text-align:center;">
+                <a href="https://x.com/Mercuryo_io" class="email-social-link" aria-label="X" style="display:inline-block; width:31px; height:28px; text-decoration:none; line-height:28px;">
+                  <img src="${ASSETS.x}" alt="X" width="15.5" height="14" class="email-social-icon" style="display:block; width:15.5px; height:14px; margin:7px auto;" />
                 </a>
               </td>
             </tr>
@@ -76,13 +76,14 @@ function renderFooter() {
 
 function renderDesktop() {
   return `
-    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; border-radius:24px; overflow:hidden; background-color:#ffffff; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; border-radius:24px; overflow:hidden; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -6px top 2px; background-size:305px 305px;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
                   <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
+                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
                 </td>
               </tr>
               <tr>
@@ -93,7 +94,7 @@ function renderDesktop() {
               </tr>
               <tr>
                 <td style="padding-top:24px; padding-bottom:32px; padding-right:40px;">
-                  <table role="presentation" width="420" cellpadding="0" cellspacing="0" border="0" class="email-surface" style="border-radius:24px;">
+                  <table role="presentation" width="420" cellpadding="0" cellspacing="0" border="0" class="email-surface" bgcolor="#f2ede8" style="background-color:#f2ede8; border-radius:24px;">
                     <tr>
                       <td style="padding:24px 32px 20px;">
                         <table role="presentation" width="356" cellpadding="0" cellspacing="0" border="0">

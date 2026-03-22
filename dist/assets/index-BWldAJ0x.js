@@ -46,8 +46,12 @@ Error generating stack: `+e.message+`
         color: #ffffff !important;
       }
 
-      .email-shell {
-        background-color: #181614 !important;
+      .email-code-logo-light {
+        display: none !important;
+      }
+
+      .email-code-logo-dark {
+        display: block !important;
       }
 
       .email-social-icon {
@@ -59,6 +63,10 @@ Error generating stack: `+e.message+`
       }
 
       .email-social-link {
+        background-color: #2a2521 !important;
+      }
+
+      .email-social-chip {
         background-color: #2a2521 !important;
       }
 
@@ -96,8 +104,12 @@ Error generating stack: `+e.message+`
       color: #8ea7ff !important;
     }
 
-    [data-ogsc] .email-shell {
-      background-color: #181614 !important;
+    [data-ogsc] .email-code-logo-light {
+      display: none !important;
+    }
+
+    [data-ogsc] .email-code-logo-dark {
+      display: block !important;
     }
 
     [data-ogsc] .email-social-icon {
@@ -109,6 +121,10 @@ Error generating stack: `+e.message+`
     }
 
     [data-ogsc] .email-social-link {
+      background-color: #2a2521 !important;
+    }
+
+    [data-ogsc] .email-social-chip {
       background-color: #2a2521 !important;
     }
 
@@ -165,17 +181,8 @@ Error generating stack: `+e.message+`
         mso-hide: all !important;
       }
 
-      .email-shell {
-        background-color: #ffffff;
-      }
-
-      .email-root {
-        background-color: #ffffff;
-      }
-
       .email-card {
         width: 532px;
-        background-color: transparent;
         border-radius: 24px;
       }
 
@@ -272,6 +279,12 @@ Error generating stack: `+e.message+`
         height: 16px !important;
       }
 
+      .email-code-logo-dark {
+        display: none;
+        width: 113.702px !important;
+        height: 16px !important;
+      }
+
       .email-trustpilot-shell {
         display: inline-block;
       }
@@ -284,12 +297,15 @@ Error generating stack: `+e.message+`
         display: inline-block;
         width: 29px;
         height: 28px;
-        border-radius: 14px;
-        background-color: #eee7e0;
         text-decoration: none;
         line-height: 28px;
         text-align: center;
         font-size: 0;
+      }
+
+      .email-social-chip {
+        background-color: #eee7e0;
+        border-radius: 14px;
       }
 
       ${x()}
@@ -326,9 +342,15 @@ Error generating stack: `+e.message+`
   </head>
   <body>
     <div class="email-preheader">${t||e}</div>
-    ${n}
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center" style="padding:0 16px;">
+          ${n}
+        </td>
+      </tr>
+    </table>
   </body>
-</html>`}var te=`https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets`;function S(e){return typeof window<`u`?`/assets/${e}`:`${((typeof process<`u`&&{}.ASSET_BASE_URL?{}.ASSET_BASE_URL:``)||te).replace(/\/$/,``)}/${e}`}var ne={logo:S(`table-logo.png`),divider:S(`table-divider.png`),chipIcon:S(`table-chip-icon.png?v=2`),linkedin:S(`table-linkedin-glyph.png?v=3`),x:S(`table-x-glyph.png?v=3`),decor:S(`table-decor.png`),trustpilotRating:S(`table-trustpilot-rating-raw.png?v=2`),trustpilotStar:S(`trustpilot-star-only.png?v=2`)};function re(){return`
+</html>`}var te=`https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets`;function S(e){return typeof window<`u`?`/assets/${e}`:`${((typeof process<`u`&&{}.ASSET_BASE_URL?{}.ASSET_BASE_URL:``)||te).replace(/\/$/,``)}/${e}`}var ne={logo:S(`table-logo.png`),logoDark:S(`table-logo-dark.png`),chipIcon:S(`merc-foote.png`),linkedin:S(`in-footer.png`),x:S(`X-footer.png`),decor:S(`Star.png`),trustpilotRating:S(`table-trustpilot-rating-raw.png?v=2`),trustpilotStar:S(`trustpilot-star-only.png?v=2`)};function re(){return`
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td style="padding-bottom:24px;">
@@ -357,28 +379,28 @@ Error generating stack: `+e.message+`
         <td>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
             <tr>
-              <td class="email-chip" style="padding:4px 12px 4px 4px;">
+              <td class="email-chip" bgcolor="#eee7e0" style="padding:4px 12px 4px 4px; background-color:#eee7e0; border-radius:24px;">
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                   <tr>
                     <td style="padding-right:6px;">
-                      <img src="${ne.chipIcon}" alt="" width="20" height="20" style="display:block;" />
+                      <img src="${ne.chipIcon}" alt="" width="20" height="20" style="display:block; width:20px; height:20px;" />
                     </td>
                     <td class="email-caption email-chip-text">Mercuryo.io</td>
                   </tr>
                 </table>
               </td>
               <td style="width:6px;"></td>
-              <td class="email-chip email-chip-text email-caption" style="padding:8px 12px;">Centro de aprendizaje</td>
+              <td class="email-chip email-chip-text email-caption" bgcolor="#eee7e0" style="padding:8px 12px; background-color:#eee7e0; border-radius:24px;">Centro de aprendizaje</td>
               <td style="width:6px;"></td>
-              <td>
-                <a href="https://www.linkedin.com/company/mercuryo/" class="email-social-link" aria-label="LinkedIn">
-                  <img src="${ne.linkedin}" alt="LinkedIn" width="28" height="28" class="email-social-icon" style="display:block;" />
+              <td class="email-social-chip" bgcolor="#eee7e0" style="width:28px; height:28px; background-color:#eee7e0; border-radius:14px; text-align:center;">
+                <a href="https://www.linkedin.com/company/mercuryo/" class="email-social-link" aria-label="LinkedIn" style="display:inline-block; width:28px; height:28px; text-decoration:none; line-height:28px;">
+                  <img src="${ne.linkedin}" alt="LinkedIn" width="14" height="14" class="email-social-icon" style="display:block; width:14px; height:14px; margin:7px auto;" />
                 </a>
               </td>
               <td style="width:6px;"></td>
-              <td>
-                <a href="https://x.com/Mercuryo_io" class="email-social-link" aria-label="X">
-                  <img src="${ne.x}" alt="X" width="29" height="28" class="email-social-icon" style="display:block;" />
+              <td class="email-social-chip" bgcolor="#eee7e0" style="width:31px; height:28px; background-color:#eee7e0; border-radius:14px; text-align:center;">
+                <a href="https://x.com/Mercuryo_io" class="email-social-link" aria-label="X" style="display:inline-block; width:31px; height:28px; text-decoration:none; line-height:28px;">
+                  <img src="${ne.x}" alt="X" width="15.5" height="14" class="email-social-icon" style="display:block; width:15.5px; height:14px; margin:7px auto;" />
                 </a>
               </td>
             </tr>
@@ -387,13 +409,14 @@ Error generating stack: `+e.message+`
       </tr>
     </table>
   `}function ie(){return`
-    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; border-radius:24px; overflow:hidden; background-color:#ffffff; background-image:url('${ne.decor}'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; border-radius:24px; overflow:hidden; background-image:url('${ne.decor}'); background-repeat:no-repeat; background-position:right -6px top 2px; background-size:305px 305px;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
                   <img src="${ne.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
+                  <img src="${ne.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
                 </td>
               </tr>
               <tr>
@@ -404,7 +427,7 @@ Error generating stack: `+e.message+`
               </tr>
               <tr>
                 <td style="padding-top:24px; padding-bottom:32px; padding-right:40px;">
-                  <table role="presentation" width="420" cellpadding="0" cellspacing="0" border="0" class="email-surface" style="border-radius:24px;">
+                  <table role="presentation" width="420" cellpadding="0" cellspacing="0" border="0" class="email-surface" bgcolor="#f2ede8" style="background-color:#f2ede8; border-radius:24px;">
                     <tr>
                       <td style="padding:24px 32px 20px;">
                         <table role="presentation" width="356" cellpadding="0" cellspacing="0" border="0">
@@ -479,13 +502,8 @@ Error generating stack: `+e.message+`
       </table>
   `}function C(){return{html:ee({title:`Your wallet was topped up with BTC`,previewText:`Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.`,body:ie()}),attachments:[]}}var ae=`
   <style>
-    body,
-    .email-root {
+    body {
       background-color: #111111 !important;
-    }
-
-    .email-card {
-      background-color: #181614 !important;
     }
 
     .email-primary,
