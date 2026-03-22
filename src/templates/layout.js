@@ -335,12 +335,20 @@ export function renderLayout({ title, previewText, body }) {
         display: none;
         width: 113.702px !important;
         height: 16px !important;
+        max-height: 0 !important;
+        max-width: 0 !important;
+        overflow: hidden !important;
+        mso-hide: all;
       }
 
       .email-logo-dark {
         display: none;
         width: 113.702px !important;
         height: 16px !important;
+        max-height: 0 !important;
+        max-width: 0 !important;
+        overflow: hidden !important;
+        mso-hide: all;
       }
 
       .email-trustpilot-shell {

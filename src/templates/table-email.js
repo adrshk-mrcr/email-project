@@ -2,7 +2,8 @@ import { renderLayout } from './layout.js';
 import { assetUrl } from '../lib/asset-base-url.js';
 
 const ASSETS = {
-  logo: assetUrl('mercuryo-logo-universal.png'),
+  logo: assetUrl('table-logo.png'),
+  logoDark: assetUrl('table-logo-dark.png'),
   chipIcon: assetUrl('merc-foote.png'),
   linkedin: assetUrl('in-footer.png'),
   x: assetUrl('X-footer.png'),
@@ -85,6 +86,7 @@ function renderDesktop() {
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
                   <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
+                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:none; max-height:0; max-width:0; overflow:hidden; mso-hide:all;" />
                 </td>
               </tr>
               <tr>
@@ -180,6 +182,7 @@ function renderMobile() {
             <tr>
               <td style="padding-top:32px; padding-bottom:56px;">
                 <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
+                <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:none; max-height:0; max-width:0; overflow:hidden; mso-hide:all;" />
               </td>
             </tr>
             <tr>
