@@ -15,7 +15,7 @@ function renderFooter() {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:40px;">
       <tr>
         <td style="padding-bottom:24px;">
-          <img src="${ASSETS.divider}" alt="" width="496" style="display:block; width:496px; max-width:none;" />
+          <div class="email-divider-line" style="width:496px;"></div>
         </td>
       </tr>
       <tr>
@@ -66,8 +66,7 @@ function renderFooter() {
 
 function renderDesktop(code) {
   return `
-    <div style="width:532px; background-color:#ffffff; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px; border-radius:24px; overflow:hidden;">
-      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="background-color:transparent;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; background-color:#ffffff; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px; border-radius:24px; overflow:hidden;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
@@ -106,7 +105,6 @@ function renderDesktop(code) {
           </td>
         </tr>
       </table>
-    </div>
   `;
 }
 

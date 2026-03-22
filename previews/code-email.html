@@ -152,19 +152,10 @@
         overflow: hidden;
       }
 
-      .email-logo,
-      .email-logo-dark {
+      .email-logo {
         display: block;
         width: 113.702px !important;
         height: 16px !important;
-      }
-
-      .email-logo-dark {
-        display: none;
-      }
-
-      .email-decor-dark {
-        display: none;
       }
 
       .email-trustpilot-shell {
@@ -176,15 +167,15 @@
       }
 
       .email-social-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-block;
         width: 29px;
         height: 28px;
         border-radius: 14px;
         background-color: #eee7e0;
         text-decoration: none;
-        line-height: 0;
+        line-height: 28px;
+        text-align: center;
+        font-size: 0;
       }
 
       
@@ -229,22 +220,6 @@
 
       .email-shell {
         background-color: #181614 !important;
-      }
-
-      .email-logo {
-        display: none !important;
-      }
-
-      .email-logo-dark {
-        display: block !important;
-      }
-
-      .email-decor {
-        display: none !important;
-      }
-
-      .email-decor-dark {
-        display: block !important;
       }
 
       .email-social-icon {
@@ -297,22 +272,6 @@
       background-color: #181614 !important;
     }
 
-    [data-ogsc] .email-logo {
-      display: none !important;
-    }
-
-    [data-ogsc] .email-logo-dark {
-      display: block !important;
-    }
-
-    [data-ogsc] .email-decor {
-      display: none !important;
-    }
-
-    [data-ogsc] .email-decor-dark {
-      display: block !important;
-    }
-
     [data-ogsc] .email-social-icon {
       display: block !important;
     }
@@ -360,8 +319,7 @@
   <body>
     <div class="email-preheader">Your authentication code is 65328.</div>
     
-    <div style="width:532px; background-color:#ffffff; background-image:url('https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/code-decor.png'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px; border-radius:24px; overflow:hidden;">
-      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="background-color:transparent;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; background-color:#ffffff; background-image:url('https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/code-decor.png'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px; border-radius:24px; overflow:hidden;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
@@ -398,7 +356,7 @@
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:40px;">
       <tr>
         <td style="padding-bottom:24px;">
-          <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/code-divider.png" alt="" width="496" style="display:block; width:496px; max-width:none;" />
+          <div class="email-divider-line" style="width:496px;"></div>
         </td>
       </tr>
       <tr>
@@ -450,7 +408,6 @@
           </td>
         </tr>
       </table>
-    </div>
   
   </body>
 </html>

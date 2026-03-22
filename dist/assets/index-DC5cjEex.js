@@ -50,22 +50,6 @@ Error generating stack: `+e.message+`
         background-color: #181614 !important;
       }
 
-      .email-logo {
-        display: none !important;
-      }
-
-      .email-logo-dark {
-        display: block !important;
-      }
-
-      .email-decor {
-        display: none !important;
-      }
-
-      .email-decor-dark {
-        display: block !important;
-      }
-
       .email-social-icon {
         display: block !important;
       }
@@ -114,22 +98,6 @@ Error generating stack: `+e.message+`
 
     [data-ogsc] .email-shell {
       background-color: #181614 !important;
-    }
-
-    [data-ogsc] .email-logo {
-      display: none !important;
-    }
-
-    [data-ogsc] .email-logo-dark {
-      display: block !important;
-    }
-
-    [data-ogsc] .email-decor {
-      display: none !important;
-    }
-
-    [data-ogsc] .email-decor-dark {
-      display: block !important;
     }
 
     [data-ogsc] .email-social-icon {
@@ -298,19 +266,10 @@ Error generating stack: `+e.message+`
         overflow: hidden;
       }
 
-      .email-logo,
-      .email-logo-dark {
+      .email-logo {
         display: block;
         width: 113.702px !important;
         height: 16px !important;
-      }
-
-      .email-logo-dark {
-        display: none;
-      }
-
-      .email-decor-dark {
-        display: none;
       }
 
       .email-trustpilot-shell {
@@ -322,15 +281,15 @@ Error generating stack: `+e.message+`
       }
 
       .email-social-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-block;
         width: 29px;
         height: 28px;
         border-radius: 14px;
         background-color: #eee7e0;
         text-decoration: none;
-        line-height: 0;
+        line-height: 28px;
+        text-align: center;
+        font-size: 0;
       }
 
       ${x()}
@@ -369,7 +328,7 @@ Error generating stack: `+e.message+`
     <div class="email-preheader">${t||e}</div>
     ${n}
   </body>
-</html>`}var te=`https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets`;function S(e){return typeof window<`u`?`/assets/${e}`:`${((typeof process<`u`&&{}.ASSET_BASE_URL?{}.ASSET_BASE_URL:``)||te).replace(/\/$/,``)}/${e}`}var ne={logo:S(`table-logo.png`),logoDark:S(`table-logo-dark.png`),divider:S(`table-divider.png`),chipIcon:S(`table-chip-icon.png?v=2`),linkedin:S(`table-linkedin-glyph.png?v=3`),x:S(`table-x-glyph.png?v=3`),decor:S(`table-decor.png`),decorDark:S(`table-decor-dark.png`),trustpilotRating:S(`table-trustpilot-rating-raw.png?v=2`),trustpilotStar:S(`trustpilot-star-only.png?v=2`)};function re(){return`
+</html>`}var te=`https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets`;function S(e){return typeof window<`u`?`/assets/${e}`:`${((typeof process<`u`&&{}.ASSET_BASE_URL?{}.ASSET_BASE_URL:``)||te).replace(/\/$/,``)}/${e}`}var ne={logo:S(`table-logo.png`),divider:S(`table-divider.png`),chipIcon:S(`table-chip-icon.png?v=2`),linkedin:S(`table-linkedin-glyph.png?v=3`),x:S(`table-x-glyph.png?v=3`),decor:S(`table-decor.png`),trustpilotRating:S(`table-trustpilot-rating-raw.png?v=2`),trustpilotStar:S(`trustpilot-star-only.png?v=2`)};function re(){return`
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td style="padding-bottom:24px;">
@@ -428,21 +387,13 @@ Error generating stack: `+e.message+`
       </tr>
     </table>
   `}function ie(){return`
-    <div class="email-shell" style="position:relative; width:532px; border-radius:24px; overflow:hidden;">
-      <div style="position:absolute; top:-96.13px; right:-94.57px; width:499px; height:499px; z-index:2; pointer-events:none;">
-        <div style="position:absolute; top:69.5px; left:69.5px; width:360px; height:360px; transform:rotate(33.56deg); transform-origin:center;">
-          <img src="${ne.decor}" alt="" width="360" height="360" class="email-decor" style="display:block; width:360px; height:360px;" />
-          <img src="${ne.decorDark}" alt="" width="360" height="360" class="email-decor-dark" style="display:block; width:360px; height:360px;" />
-        </div>
-      </div>
-      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="position:relative; z-index:3; background-color:transparent;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; border-radius:24px; overflow:hidden; background-color:#ffffff; background-image:url('${ne.decor}'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
-                  <img src="${ne.logo}" alt="mercuryo" width="114" height="16" class="email-logo" />
-                  <img src="${ne.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" />
+                  <img src="${ne.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
                 </td>
               </tr>
               <tr>
@@ -526,7 +477,6 @@ Error generating stack: `+e.message+`
           </td>
         </tr>
       </table>
-    </div>
   `}function C(){return{html:ee({title:`Your wallet was topped up with BTC`,previewText:`Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.`,body:ie()}),attachments:[]}}var ae=`
   <style>
     body,

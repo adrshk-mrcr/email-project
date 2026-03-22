@@ -3,13 +3,11 @@ import { assetUrl } from '../lib/asset-base-url.js';
 
 const ASSETS = {
   logo: assetUrl('table-logo.png'),
-  logoDark: assetUrl('table-logo-dark.png'),
   divider: assetUrl('table-divider.png'),
   chipIcon: assetUrl('table-chip-icon.png?v=2'),
   linkedin: assetUrl('table-linkedin-glyph.png?v=3'),
   x: assetUrl('table-x-glyph.png?v=3'),
   decor: assetUrl('table-decor.png'),
-  decorDark: assetUrl('table-decor-dark.png'),
   trustpilotRating: assetUrl('table-trustpilot-rating-raw.png?v=2'),
   trustpilotStar: assetUrl('trustpilot-star-only.png?v=2')
 };
@@ -78,21 +76,13 @@ function renderFooter() {
 
 function renderDesktop() {
   return `
-    <div class="email-shell" style="position:relative; width:532px; border-radius:24px; overflow:hidden;">
-      <div style="position:absolute; top:-96.13px; right:-94.57px; width:499px; height:499px; z-index:2; pointer-events:none;">
-        <div style="position:absolute; top:69.5px; left:69.5px; width:360px; height:360px; transform:rotate(33.56deg); transform-origin:center;">
-          <img src="${ASSETS.decor}" alt="" width="360" height="360" class="email-decor" style="display:block; width:360px; height:360px;" />
-          <img src="${ASSETS.decorDark}" alt="" width="360" height="360" class="email-decor-dark" style="display:block; width:360px; height:360px;" />
-        </div>
-      </div>
-      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="position:relative; z-index:3; background-color:transparent;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; border-radius:24px; overflow:hidden; background-color:#ffffff; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
-                  <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" />
-                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" />
+                  <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
                 </td>
               </tr>
               <tr>
@@ -176,7 +166,6 @@ function renderDesktop() {
           </td>
         </tr>
       </table>
-    </div>
   `;
 }
 
