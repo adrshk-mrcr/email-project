@@ -39,8 +39,12 @@ function renderDarkModeStyles() {
         color: #ffffff !important;
       }
 
-      .email-shell {
-        background-color: #181614 !important;
+      .email-code-logo-light {
+        display: none !important;
+      }
+
+      .email-code-logo-dark {
+        display: block !important;
       }
 
       .email-social-icon {
@@ -52,6 +56,10 @@ function renderDarkModeStyles() {
       }
 
       .email-social-link {
+        background-color: #2a2521 !important;
+      }
+
+      .email-social-chip {
         background-color: #2a2521 !important;
       }
 
@@ -89,8 +97,12 @@ function renderDarkModeStyles() {
       color: #8ea7ff !important;
     }
 
-    [data-ogsc] .email-shell {
-      background-color: #181614 !important;
+    [data-ogsc] .email-code-logo-light {
+      display: none !important;
+    }
+
+    [data-ogsc] .email-code-logo-dark {
+      display: block !important;
     }
 
     [data-ogsc] .email-social-icon {
@@ -102,6 +114,10 @@ function renderDarkModeStyles() {
     }
 
     [data-ogsc] .email-social-link {
+      background-color: #2a2521 !important;
+    }
+
+    [data-ogsc] .email-social-chip {
       background-color: #2a2521 !important;
     }
 
@@ -162,17 +178,8 @@ export function renderLayout({ title, previewText, body }) {
         mso-hide: all !important;
       }
 
-      .email-shell {
-        background-color: #ffffff;
-      }
-
-      .email-root {
-        background-color: #ffffff;
-      }
-
       .email-card {
         width: 532px;
-        background-color: transparent;
         border-radius: 24px;
       }
 
@@ -269,6 +276,12 @@ export function renderLayout({ title, previewText, body }) {
         height: 16px !important;
       }
 
+      .email-code-logo-dark {
+        display: none;
+        width: 113.702px !important;
+        height: 16px !important;
+      }
+
       .email-trustpilot-shell {
         display: inline-block;
       }
@@ -281,12 +294,15 @@ export function renderLayout({ title, previewText, body }) {
         display: inline-block;
         width: 29px;
         height: 28px;
-        border-radius: 14px;
-        background-color: #eee7e0;
         text-decoration: none;
         line-height: 28px;
         text-align: center;
         font-size: 0;
+      }
+
+      .email-social-chip {
+        background-color: #eee7e0;
+        border-radius: 14px;
       }
 
       ${renderDarkModeStyles()}
@@ -323,7 +339,13 @@ export function renderLayout({ title, previewText, body }) {
   </head>
   <body>
     <div class="email-preheader">${previewText || title}</div>
-    ${body}
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center" style="padding:0 16px;">
+          ${body}
+        </td>
+      </tr>
+    </table>
   </body>
 </html>`;
 }

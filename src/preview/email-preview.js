@@ -2,13 +2,8 @@ import { renderTableEmail } from '../templates/table-email.js';
 
 const DARK_PREVIEW_STYLE = `
   <style>
-    body,
-    .email-root {
+    body {
       background-color: #111111 !important;
-    }
-
-    .email-card {
-      background-color: #181614 !important;
     }
 
     .email-primary,

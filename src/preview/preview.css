@@ -89,6 +89,8 @@ select {
 
 .preview-frame > div {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .email-preview table {
@@ -120,17 +122,8 @@ select {
   overflow: hidden !important;
 }
 
-.email-preview .email-root {
-  background-color: #ffffff;
-}
-
-.email-preview .email-shell {
-  background-color: #ffffff;
-}
-
 .email-preview .email-card {
   width: 532px;
-  background-color: transparent;
   border-radius: 24px;
 }
 
@@ -235,15 +228,18 @@ select {
 }
 
 .email-preview .email-social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 29px;
   height: 28px;
-  border-radius: 14px;
-  background-color: #eee7e0;
   text-decoration: none;
-  line-height: 0;
+  line-height: 28px;
+  text-align: center;
+  font-size: 0;
+}
+
+.email-preview .email-social-chip {
+  background-color: #eee7e0;
+  border-radius: 14px;
 }
 
 .email-preview--dark {
@@ -284,10 +280,6 @@ select {
   color: #ffffff !important;
 }
 
-.email-preview--dark .email-shell {
-  background-color: #181614 !important;
-}
-
 .email-preview--dark .email-logo {
   display: none !important;
 }
@@ -313,5 +305,9 @@ select {
 }
 
 .email-preview--dark .email-social-link {
+  background-color: transparent !important;
+}
+
+.email-preview--dark .email-social-chip {
   background-color: #2a2521 !important;
 }
