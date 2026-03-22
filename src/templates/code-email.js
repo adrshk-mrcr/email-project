@@ -2,20 +2,22 @@ import { renderLayout } from './layout.js';
 import { assetUrl } from '../lib/asset-base-url.js';
 
 const ASSETS = {
-  logo: assetUrl('code-logo.png'),
-  logoDark: assetUrl('table-logo-dark.png'),
+  logo: assetUrl('mercuryo-logo-universal.png'),
   chipIcon: assetUrl('merc-foote.png'),
   linkedin: assetUrl('in-footer.png'),
   x: assetUrl('X-footer.png'),
   decor: assetUrl('Star.png')
 };
 
-function renderFooter() {
+function renderFooter({ dividerWidth }) {
   return `
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:40px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="40" style="height:40px; line-height:40px; font-size:0;">&nbsp;</td>
+      </tr>
       <tr>
         <td style="padding-bottom:24px;">
-          <div class="email-divider-line" style="width:496px;"></div>
+          <div class="email-divider-line" style="width:${dividerWidth};"></div>
         </td>
       </tr>
       <tr>
@@ -74,14 +76,13 @@ function renderFooter() {
 
 function renderDesktop(code) {
   return `
-    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell" style="width:532px; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -6px top 2px; background-size:305px 305px; border-radius:24px; overflow:hidden;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell desktop-only" style="width:532px; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -6px top 2px; background-size:305px 305px; border-radius:24px; overflow:hidden;">
         <tr>
           <td class="email-inner">
-            <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
+            <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" class="email-content-table">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
                   <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo email-code-logo-light" style="display:block;" />
-                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-code-logo-dark" style="display:block;" />
                 </td>
               </tr>
               <tr>
@@ -95,7 +96,7 @@ function renderDesktop(code) {
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="email-surface" bgcolor="#f2ede8" style="background-color:#f2ede8; border-radius:28px;">
                     <tr>
                       <td style="padding:20px 40px;">
-                        <div style="font-family: Arial, sans-serif; font-size:48px; line-height:48px; font-weight:600; color:#171513;">${code}</div>
+                        <div class="email-code-value" style="font-family: Arial, sans-serif; font-size:48px; line-height:48px; font-weight:600; color:#171513; -webkit-text-fill-color:#171513;">${code}</div>
                       </td>
                     </tr>
                   </table>
@@ -108,7 +109,7 @@ function renderDesktop(code) {
                 <td style="padding-top:4px;" class="email-text email-primary">Regards,<br />Mercuryo Team</td>
               </tr>
               <tr>
-                <td>${renderFooter()}</td>
+                <td>${renderFooter({ dividerWidth: 496 })}</td>
               </tr>
             </table>
           </td>
@@ -117,12 +118,56 @@ function renderDesktop(code) {
   `;
 }
 
+function renderMobile(code) {
+  return `
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell mobile-only" style="width:100%; max-width:390px; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -145px top -47px; background-size:214px 214px; border-radius:24px; overflow:hidden;">
+      <tr>
+        <td class="email-inner email-inner-mobile">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-content-table" style="width:100%;">
+            <tr>
+              <td style="padding-top:32px; padding-bottom:56px;">
+                <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo email-code-logo-light" style="display:block;" />
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:12px;" class="email-title">Authentication code</td>
+            </tr>
+            <tr>
+              <td style="padding-top:4px; padding-bottom:8px;" class="email-text email-primary">Your authentication code is:</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:16px;">
+                <table role="presentation" width="231" cellpadding="0" cellspacing="0" border="0" class="email-surface" bgcolor="#f2ede8" style="width:231px; background-color:#f2ede8; border-radius:28px;">
+                  <tr>
+                    <td style="padding:16px 40px;">
+                      <div class="email-code-value" style="font-family: Arial, sans-serif; font-size:48px; line-height:48px; font-weight:600; color:#171513; -webkit-text-fill-color:#171513;">${code}</div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top:4px; padding-bottom:12px;" class="email-text email-primary">If you did not make any requests, just ignore this email</td>
+            </tr>
+            <tr>
+              <td style="padding-top:4px;" class="email-text email-primary">Regards,<br />Mercuryo Team</td>
+            </tr>
+            <tr>
+              <td>${renderFooter({ dividerWidth: '100%' })}</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  `;
+}
+
 export function renderCodeEmail({ code = '65328' } = {}) {
   return {
     html: renderLayout({
       title: 'Authentication code',
       previewText: `Your authentication code is ${code}.`,
-      body: renderDesktop(code)
+      body: `${renderDesktop(code)}${renderMobile(code)}`
     }),
     attachments: []
   };

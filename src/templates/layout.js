@@ -21,6 +21,10 @@ function renderDarkModeStyles() {
         background-color: #2a2521 !important;
       }
 
+      .email-shell {
+        background-color: #111111 !important;
+      }
+
       .email-divider,
       .email-rule {
         border-color: rgba(245, 239, 233, 0.12) !important;
@@ -39,11 +43,24 @@ function renderDarkModeStyles() {
         color: #ffffff !important;
       }
 
+      .email-code-value {
+        color: #f5efe9 !important;
+        -webkit-text-fill-color: #f5efe9 !important;
+      }
+
       .email-code-logo-light {
         display: none !important;
       }
 
       .email-code-logo-dark {
+        display: block !important;
+      }
+
+      .email-logo {
+        display: none !important;
+      }
+
+      .email-logo-dark {
         display: block !important;
       }
 
@@ -84,6 +101,10 @@ function renderDarkModeStyles() {
       background-color: #2a2521 !important;
     }
 
+    [data-ogsc] .email-shell {
+      background-color: #111111 !important;
+    }
+
     [data-ogsc] .email-divider,
     [data-ogsc] .email-rule {
       border-color: rgba(245, 239, 233, 0.12) !important;
@@ -97,11 +118,24 @@ function renderDarkModeStyles() {
       color: #8ea7ff !important;
     }
 
+    [data-ogsc] .email-code-value {
+      color: #f5efe9 !important;
+      -webkit-text-fill-color: #f5efe9 !important;
+    }
+
     [data-ogsc] .email-code-logo-light {
       display: none !important;
     }
 
     [data-ogsc] .email-code-logo-dark {
+      display: block !important;
+    }
+
+    [data-ogsc] .email-logo {
+      display: none !important;
+    }
+
+    [data-ogsc] .email-logo-dark {
       display: block !important;
     }
 
@@ -181,6 +215,22 @@ export function renderLayout({ title, previewText, body }) {
       .email-card {
         width: 532px;
         border-radius: 24px;
+      }
+
+      .email-shell {
+        background-color: transparent;
+      }
+
+      .email-content-table {
+        width: 460px;
+      }
+
+      .email-order-shell {
+        width: 420px;
+      }
+
+      .email-order-content {
+        width: 356px;
       }
 
       .email-inner {
@@ -264,6 +314,11 @@ export function renderLayout({ title, previewText, body }) {
         text-decoration: none;
       }
 
+      .email-code-value {
+        color: #171513;
+        -webkit-text-fill-color: #171513;
+      }
+
       .mobile-only {
         display: none;
         max-height: 0;
@@ -277,6 +332,12 @@ export function renderLayout({ title, previewText, body }) {
       }
 
       .email-code-logo-dark {
+        display: none;
+        width: 113.702px !important;
+        height: 16px !important;
+      }
+
+      .email-logo-dark {
         display: none;
         width: 113.702px !important;
         height: 16px !important;
@@ -315,13 +376,23 @@ export function renderLayout({ title, previewText, body }) {
         }
 
         .mobile-only {
-          display: block !important;
+          display: table !important;
           max-height: none !important;
           overflow: visible !important;
         }
 
         .email-card {
           width: 390px !important;
+        }
+
+        .email-page-pad {
+          padding: 0 !important;
+        }
+
+        .email-content-table,
+        .email-order-shell,
+        .email-order-content {
+          width: 100% !important;
         }
 
         .email-inner {
@@ -341,7 +412,7 @@ export function renderLayout({ title, previewText, body }) {
     <div class="email-preheader">${previewText || title}</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
-        <td align="center" style="padding:0 16px;">
+        <td align="center" class="email-page-pad" style="padding:0 16px;">
           ${body}
         </td>
       </tr>
