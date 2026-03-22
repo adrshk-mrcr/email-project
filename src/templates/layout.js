@@ -1,13 +1,8 @@
 function renderDarkModeStyles() {
   return `
     @media (prefers-color-scheme: dark) {
-      body,
-      .email-root {
+      body {
         background-color: #111111 !important;
-      }
-
-      .email-card {
-        background-color: #181614 !important;
       }
 
       .email-primary,
@@ -26,8 +21,13 @@ function renderDarkModeStyles() {
         background-color: #2a2521 !important;
       }
 
-      .email-divider {
-        border-color: #4d443d !important;
+      .email-divider,
+      .email-rule {
+        border-color: rgba(245, 239, 233, 0.12) !important;
+      }
+
+      .email-divider-line {
+        background-color: rgba(245, 239, 233, 0.12) !important;
       }
 
       .email-link {
@@ -38,15 +38,43 @@ function renderDarkModeStyles() {
         background-color: #00b478 !important;
         color: #ffffff !important;
       }
+
+      .email-shell {
+        background-color: #181614 !important;
+      }
+
+      .email-logo {
+        display: none !important;
+      }
+
+      .email-logo-dark {
+        display: block !important;
+      }
+
+      .email-decor {
+        display: none !important;
+      }
+
+      .email-decor-dark {
+        display: block !important;
+      }
+
+      .email-social-icon {
+        display: block !important;
+      }
+
+      .email-trustpilot-label {
+        color: #f5efe9 !important;
+      }
+
+      .email-social-link {
+        background-color: #2a2521 !important;
+      }
+
     }
 
-    [data-ogsc] body,
-    [data-ogsc] .email-root {
+    [data-ogsc] body {
       background-color: #111111 !important;
-    }
-
-    [data-ogsc] .email-card {
-      background-color: #181614 !important;
     }
 
     [data-ogsc] .email-primary,
@@ -64,13 +92,51 @@ function renderDarkModeStyles() {
       background-color: #2a2521 !important;
     }
 
-    [data-ogsc] .email-divider {
-      border-color: #4d443d !important;
+    [data-ogsc] .email-divider,
+    [data-ogsc] .email-rule {
+      border-color: rgba(245, 239, 233, 0.12) !important;
+    }
+
+    [data-ogsc] .email-divider-line {
+      background-color: rgba(245, 239, 233, 0.12) !important;
     }
 
     [data-ogsc] .email-link {
       color: #8ea7ff !important;
     }
+
+    [data-ogsc] .email-shell {
+      background-color: #181614 !important;
+    }
+
+    [data-ogsc] .email-logo {
+      display: none !important;
+    }
+
+    [data-ogsc] .email-logo-dark {
+      display: block !important;
+    }
+
+    [data-ogsc] .email-decor {
+      display: none !important;
+    }
+
+    [data-ogsc] .email-decor-dark {
+      display: block !important;
+    }
+
+    [data-ogsc] .email-social-icon {
+      display: block !important;
+    }
+
+    [data-ogsc] .email-trustpilot-label {
+      color: #f5efe9 !important;
+    }
+
+    [data-ogsc] .email-social-link {
+      background-color: #2a2521 !important;
+    }
+
   `;
 }
 
@@ -128,13 +194,17 @@ export function renderLayout({ title, previewText, body }) {
         mso-hide: all !important;
       }
 
+      .email-shell {
+        background-color: #ffffff;
+      }
+
       .email-root {
         background-color: #ffffff;
       }
 
       .email-card {
         width: 532px;
-        background-color: #ffffff;
+        background-color: transparent;
         border-radius: 24px;
       }
 
@@ -197,6 +267,15 @@ export function renderLayout({ title, previewText, body }) {
         border-top: 1px solid #d6cec5;
       }
 
+      .email-divider-line {
+        height: 1px;
+        background-color: rgba(95, 90, 85, 0.22);
+      }
+
+      .email-rule {
+        border-top: 1px solid rgba(95, 90, 85, 0.12);
+      }
+
       .email-button {
         display: inline-block;
         padding: 10px 21px 11px 21px;
@@ -214,6 +293,41 @@ export function renderLayout({ title, previewText, body }) {
         display: none;
         max-height: 0;
         overflow: hidden;
+      }
+
+      .email-logo,
+      .email-logo-dark {
+        display: block;
+        width: 113.702px !important;
+        height: 16px !important;
+      }
+
+      .email-logo-dark {
+        display: none;
+      }
+
+      .email-decor-dark {
+        display: none;
+      }
+
+      .email-trustpilot-shell {
+        display: inline-block;
+      }
+
+      .email-trustpilot-label {
+        color: #191919;
+      }
+
+      .email-social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29px;
+        height: 28px;
+        border-radius: 14px;
+        background-color: #eee7e0;
+        text-decoration: none;
+        line-height: 0;
       }
 
       ${renderDarkModeStyles()}

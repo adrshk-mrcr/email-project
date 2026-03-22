@@ -3,21 +3,23 @@ import { assetUrl } from '../lib/asset-base-url.js';
 
 const ASSETS = {
   logo: assetUrl('table-logo.png'),
+  logoDark: assetUrl('table-logo-dark.png'),
   divider: assetUrl('table-divider.png'),
-  chipIcon: assetUrl('table-chip-icon.png'),
-  linkedin: assetUrl('table-linkedin.png'),
-  x: assetUrl('table-x.png'),
+  chipIcon: assetUrl('table-chip-icon.png?v=2'),
+  linkedin: assetUrl('table-linkedin-glyph.png?v=3'),
+  x: assetUrl('table-x-glyph.png?v=3'),
   decor: assetUrl('table-decor.png'),
-  trustpilotLogo: assetUrl('table-trustpilot-logo.png'),
-  trustpilotRating: assetUrl('table-trustpilot-rating.png')
+  decorDark: assetUrl('table-decor-dark.png'),
+  trustpilotRating: assetUrl('table-trustpilot-rating-raw.png?v=2'),
+  trustpilotStar: assetUrl('trustpilot-star-only.png?v=2')
 };
 
 function renderFooter() {
   return `
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:40px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td style="padding-bottom:24px;">
-          <img src="${ASSETS.divider}" alt="" width="460" style="display:block; width:460px; max-width:none;" />
+          <div class="email-divider-line" style="width:460px;"></div>
         </td>
       </tr>
       <tr>
@@ -55,9 +57,17 @@ function renderFooter() {
               <td style="width:6px;"></td>
               <td class="email-chip email-chip-text email-caption" style="padding:8px 12px;">Centro de aprendizaje</td>
               <td style="width:6px;"></td>
-              <td><img src="${ASSETS.linkedin}" alt="LinkedIn" width="28" height="28" style="display:block;" /></td>
+              <td>
+                <a href="https://www.linkedin.com/company/mercuryo/" class="email-social-link" aria-label="LinkedIn">
+                  <img src="${ASSETS.linkedin}" alt="LinkedIn" width="28" height="28" class="email-social-icon" style="display:block;" />
+                </a>
+              </td>
               <td style="width:6px;"></td>
-              <td><img src="${ASSETS.x}" alt="X" width="29" height="28" style="display:block;" /></td>
+              <td>
+                <a href="https://x.com/Mercuryo_io" class="email-social-link" aria-label="X">
+                  <img src="${ASSETS.x}" alt="X" width="29" height="28" class="email-social-icon" style="display:block;" />
+                </a>
+              </td>
             </tr>
           </table>
         </td>
@@ -68,14 +78,21 @@ function renderFooter() {
 
 function renderDesktop() {
   return `
-    <div style="width:532px; background-color:#ffffff; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px; border-radius:24px; overflow:hidden;">
-      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="background-color:transparent;">
+    <div class="email-shell" style="position:relative; width:532px; border-radius:24px; overflow:hidden;">
+      <div style="position:absolute; top:-96.13px; right:-94.57px; width:499px; height:499px; z-index:2; pointer-events:none;">
+        <div style="position:absolute; top:69.5px; left:69.5px; width:360px; height:360px; transform:rotate(33.56deg); transform-origin:center;">
+          <img src="${ASSETS.decor}" alt="" width="360" height="360" class="email-decor" style="display:block; width:360px; height:360px;" />
+          <img src="${ASSETS.decorDark}" alt="" width="360" height="360" class="email-decor-dark" style="display:block; width:360px; height:360px;" />
+        </div>
+      </div>
+      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="position:relative; z-index:3; background-color:transparent;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
-                  <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" style="display:block;" />
+                  <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" />
+                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" />
                 </td>
               </tr>
               <tr>
@@ -99,16 +116,16 @@ function renderDesktop() {
                             <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">1.50744474 BTC</td>
                           </tr>
                           <tr>
-                            <td class="email-text email-chip-text" style="padding:8px 0; border-top:1px solid #e5e5e5;">Fee</td>
-                            <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px; border-top:1px solid #e5e5e5;">€34.21</td>
+                            <td class="email-text email-chip-text email-rule" style="padding:8px 0;">Fee</td>
+                            <td class="email-text email-primary email-rule" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">€34.21</td>
                           </tr>
                           <tr>
                             <td class="email-text email-chip-text" style="padding:8px 0;">Total</td>
                             <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">€903.12</td>
                           </tr>
                           <tr>
-                            <td class="email-text email-chip-text" style="padding:8px 0; border-top:1px solid #e5e5e5;">To</td>
-                            <td class="email-caption email-primary" style="padding:8px 0; text-align:right; border-top:1px solid #e5e5e5;">BTC wallet: 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx</td>
+                            <td class="email-text email-chip-text email-rule" style="padding:8px 0;">To</td>
+                            <td class="email-caption email-primary email-rule" style="padding:8px 0; text-align:right;">BTC wallet: 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx</td>
                           </tr>
                           <tr>
                             <td class="email-text email-chip-text" style="padding:8px 0;">Mercuryo ID:</td>
@@ -130,14 +147,23 @@ function renderDesktop() {
                 <td style="padding-bottom:8px;"><a href="https://mercuryo.io" class="email-button">Share your expirience</a></td>
               </tr>
               <tr>
-                <td>
+                <td style="padding-bottom:40px;">
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                      <td style="padding-right:8px;">
-                        <img src="${ASSETS.trustpilotLogo}" alt="Trustpilot" width="83" height="20" style="display:block;" />
-                      </td>
-                      <td>
-                        <img src="${ASSETS.trustpilotRating}" alt="" width="88" height="17" style="display:block;" />
+                      <td class="email-trustpilot-shell">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="padding-right:3px;">
+                              <img src="${ASSETS.trustpilotStar}" alt="" width="20" height="20" style="display:block; width:20px; height:20px;" />
+                            </td>
+                            <td class="email-trustpilot-label" style="padding-right:8px; font-family:Arial,sans-serif; font-size:13px; line-height:15px; font-weight:700; white-space:nowrap;">
+                              Trustpilot
+                            </td>
+                            <td>
+                              <img src="${ASSETS.trustpilotRating}" alt="Trustpilot rating" width="88" height="16" style="display:block; width:88px; height:16px; opacity:0.8;" />
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                   </table>

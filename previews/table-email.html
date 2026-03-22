@@ -51,13 +51,17 @@
         mso-hide: all !important;
       }
 
+      .email-shell {
+        background-color: #ffffff;
+      }
+
       .email-root {
         background-color: #ffffff;
       }
 
       .email-card {
         width: 532px;
-        background-color: #ffffff;
+        background-color: transparent;
         border-radius: 24px;
       }
 
@@ -120,6 +124,15 @@
         border-top: 1px solid #d6cec5;
       }
 
+      .email-divider-line {
+        height: 1px;
+        background-color: rgba(95, 90, 85, 0.22);
+      }
+
+      .email-rule {
+        border-top: 1px solid rgba(95, 90, 85, 0.12);
+      }
+
       .email-button {
         display: inline-block;
         padding: 10px 21px 11px 21px;
@@ -139,15 +152,45 @@
         overflow: hidden;
       }
 
-      
-    @media (prefers-color-scheme: dark) {
-      body,
-      .email-root {
-        background-color: #111111 !important;
+      .email-logo,
+      .email-logo-dark {
+        display: block;
+        width: 113.702px !important;
+        height: 16px !important;
       }
 
-      .email-card {
-        background-color: #181614 !important;
+      .email-logo-dark {
+        display: none;
+      }
+
+      .email-decor-dark {
+        display: none;
+      }
+
+      .email-trustpilot-shell {
+        display: inline-block;
+      }
+
+      .email-trustpilot-label {
+        color: #191919;
+      }
+
+      .email-social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29px;
+        height: 28px;
+        border-radius: 14px;
+        background-color: #eee7e0;
+        text-decoration: none;
+        line-height: 0;
+      }
+
+      
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111111 !important;
       }
 
       .email-primary,
@@ -166,8 +209,13 @@
         background-color: #2a2521 !important;
       }
 
-      .email-divider {
-        border-color: #4d443d !important;
+      .email-divider,
+      .email-rule {
+        border-color: rgba(245, 239, 233, 0.12) !important;
+      }
+
+      .email-divider-line {
+        background-color: rgba(245, 239, 233, 0.12) !important;
       }
 
       .email-link {
@@ -178,15 +226,43 @@
         background-color: #00b478 !important;
         color: #ffffff !important;
       }
+
+      .email-shell {
+        background-color: #181614 !important;
+      }
+
+      .email-logo {
+        display: none !important;
+      }
+
+      .email-logo-dark {
+        display: block !important;
+      }
+
+      .email-decor {
+        display: none !important;
+      }
+
+      .email-decor-dark {
+        display: block !important;
+      }
+
+      .email-social-icon {
+        display: block !important;
+      }
+
+      .email-trustpilot-label {
+        color: #f5efe9 !important;
+      }
+
+      .email-social-link {
+        background-color: #2a2521 !important;
+      }
+
     }
 
-    [data-ogsc] body,
-    [data-ogsc] .email-root {
+    [data-ogsc] body {
       background-color: #111111 !important;
-    }
-
-    [data-ogsc] .email-card {
-      background-color: #181614 !important;
     }
 
     [data-ogsc] .email-primary,
@@ -204,13 +280,51 @@
       background-color: #2a2521 !important;
     }
 
-    [data-ogsc] .email-divider {
-      border-color: #4d443d !important;
+    [data-ogsc] .email-divider,
+    [data-ogsc] .email-rule {
+      border-color: rgba(245, 239, 233, 0.12) !important;
+    }
+
+    [data-ogsc] .email-divider-line {
+      background-color: rgba(245, 239, 233, 0.12) !important;
     }
 
     [data-ogsc] .email-link {
       color: #8ea7ff !important;
     }
+
+    [data-ogsc] .email-shell {
+      background-color: #181614 !important;
+    }
+
+    [data-ogsc] .email-logo {
+      display: none !important;
+    }
+
+    [data-ogsc] .email-logo-dark {
+      display: block !important;
+    }
+
+    [data-ogsc] .email-decor {
+      display: none !important;
+    }
+
+    [data-ogsc] .email-decor-dark {
+      display: block !important;
+    }
+
+    [data-ogsc] .email-social-icon {
+      display: block !important;
+    }
+
+    [data-ogsc] .email-trustpilot-label {
+      color: #f5efe9 !important;
+    }
+
+    [data-ogsc] .email-social-link {
+      background-color: #2a2521 !important;
+    }
+
   
 
       @media screen and (max-width: 600px) {
@@ -246,14 +360,21 @@
   <body>
     <div class="email-preheader">Mercuryo has sent 0.0002 BTC + 50.00 USD to your wallet.</div>
     
-    <div style="width:532px; background-color:#ffffff; background-image:url('https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-decor.png'); background-repeat:no-repeat; background-position:right -95px top -96px; background-size:360px 360px; border-radius:24px; overflow:hidden;">
-      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="background-color:transparent;">
+    <div class="email-shell" style="position:relative; width:532px; border-radius:24px; overflow:hidden;">
+      <div style="position:absolute; top:-96.13px; right:-94.57px; width:499px; height:499px; z-index:2; pointer-events:none;">
+        <div style="position:absolute; top:69.5px; left:69.5px; width:360px; height:360px; transform:rotate(33.56deg); transform-origin:center;">
+          <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-decor.png" alt="" width="360" height="360" class="email-decor" style="display:block; width:360px; height:360px;" />
+          <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-decor-dark.png" alt="" width="360" height="360" class="email-decor-dark" style="display:block; width:360px; height:360px;" />
+        </div>
+      </div>
+      <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card" style="position:relative; z-index:3; background-color:transparent;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
-                  <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-logo.png" alt="mercuryo" width="114" height="16" style="display:block;" />
+                  <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-logo.png" alt="mercuryo" width="114" height="16" class="email-logo" />
+                  <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-logo-dark.png" alt="mercuryo" width="114" height="16" class="email-logo-dark" />
                 </td>
               </tr>
               <tr>
@@ -277,16 +398,16 @@
                             <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">1.50744474 BTC</td>
                           </tr>
                           <tr>
-                            <td class="email-text email-chip-text" style="padding:8px 0; border-top:1px solid #e5e5e5;">Fee</td>
-                            <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px; border-top:1px solid #e5e5e5;">€34.21</td>
+                            <td class="email-text email-chip-text email-rule" style="padding:8px 0;">Fee</td>
+                            <td class="email-text email-primary email-rule" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">€34.21</td>
                           </tr>
                           <tr>
                             <td class="email-text email-chip-text" style="padding:8px 0;">Total</td>
                             <td class="email-text email-primary" style="padding:8px 0; text-align:right; font-size:16px; line-height:24px;">€903.12</td>
                           </tr>
                           <tr>
-                            <td class="email-text email-chip-text" style="padding:8px 0; border-top:1px solid #e5e5e5;">To</td>
-                            <td class="email-caption email-primary" style="padding:8px 0; text-align:right; border-top:1px solid #e5e5e5;">BTC wallet: 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx</td>
+                            <td class="email-text email-chip-text email-rule" style="padding:8px 0;">To</td>
+                            <td class="email-caption email-primary email-rule" style="padding:8px 0; text-align:right;">BTC wallet: 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx</td>
                           </tr>
                           <tr>
                             <td class="email-text email-chip-text" style="padding:8px 0;">Mercuryo ID:</td>
@@ -308,14 +429,23 @@
                 <td style="padding-bottom:8px;"><a href="https://mercuryo.io" class="email-button">Share your expirience</a></td>
               </tr>
               <tr>
-                <td>
+                <td style="padding-bottom:40px;">
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                      <td style="padding-right:8px;">
-                        <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-trustpilot-logo.png" alt="Trustpilot" width="83" height="20" style="display:block;" />
-                      </td>
-                      <td>
-                        <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-trustpilot-rating.png" alt="" width="88" height="17" style="display:block;" />
+                      <td class="email-trustpilot-shell">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="padding-right:3px;">
+                              <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/trustpilot-star-only.png?v=2" alt="" width="20" height="20" style="display:block; width:20px; height:20px;" />
+                            </td>
+                            <td class="email-trustpilot-label" style="padding-right:8px; font-family:Arial,sans-serif; font-size:13px; line-height:15px; font-weight:700; white-space:nowrap;">
+                              Trustpilot
+                            </td>
+                            <td>
+                              <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-trustpilot-rating-raw.png?v=2" alt="Trustpilot rating" width="88" height="16" style="display:block; width:88px; height:16px; opacity:0.8;" />
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                   </table>
@@ -323,10 +453,10 @@
               </tr>
               <tr>
                 <td>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:40px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td style="padding-bottom:24px;">
-          <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-divider.png" alt="" width="460" style="display:block; width:460px; max-width:none;" />
+          <div class="email-divider-line" style="width:460px;"></div>
         </td>
       </tr>
       <tr>
@@ -355,7 +485,7 @@
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                   <tr>
                     <td style="padding-right:6px;">
-                      <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-chip-icon.png" alt="" width="20" height="20" style="display:block;" />
+                      <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-chip-icon.png?v=2" alt="" width="20" height="20" style="display:block;" />
                     </td>
                     <td class="email-caption email-chip-text">Mercuryo.io</td>
                   </tr>
@@ -364,9 +494,17 @@
               <td style="width:6px;"></td>
               <td class="email-chip email-chip-text email-caption" style="padding:8px 12px;">Centro de aprendizaje</td>
               <td style="width:6px;"></td>
-              <td><img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-linkedin.png" alt="LinkedIn" width="28" height="28" style="display:block;" /></td>
+              <td>
+                <a href="https://www.linkedin.com/company/mercuryo/" class="email-social-link" aria-label="LinkedIn">
+                  <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-linkedin-glyph.png?v=3" alt="LinkedIn" width="28" height="28" class="email-social-icon" style="display:block;" />
+                </a>
+              </td>
               <td style="width:6px;"></td>
-              <td><img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-x.png" alt="X" width="29" height="28" style="display:block;" /></td>
+              <td>
+                <a href="https://x.com/Mercuryo_io" class="email-social-link" aria-label="X">
+                  <img src="https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets/table-x-glyph.png?v=3" alt="X" width="29" height="28" class="email-social-icon" style="display:block;" />
+                </a>
+              </td>
             </tr>
           </table>
         </td>
