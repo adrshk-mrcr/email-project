@@ -84,7 +84,9 @@ function renderDesktop(code) {
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
                   <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo email-code-logo-light" style="display:block;" />
-                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-code-logo-dark" style="display:none; max-height:0; max-width:0; overflow:hidden; mso-hide:all;" />
+                  <div class="email-code-logo-dark-wrap" style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+                    <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-code-logo-dark" style="display:block;" />
+                  </div>
                 </td>
               </tr>
               <tr>
@@ -129,7 +131,9 @@ function renderMobile(code) {
             <tr>
               <td style="padding-top:32px; padding-bottom:56px;">
                 <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo email-code-logo-light" style="display:block;" />
-                <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-code-logo-dark" style="display:none; max-height:0; max-width:0; overflow:hidden; mso-hide:all;" />
+                <div class="email-code-logo-dark-wrap" style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-code-logo-dark" style="display:block;" />
+                </div>
               </td>
             </tr>
             <tr>

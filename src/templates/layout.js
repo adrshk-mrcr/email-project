@@ -52,12 +52,24 @@ function renderDarkModeStyles() {
         display: none !important;
       }
 
+      .email-code-logo-dark-wrap {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+
       .email-code-logo-dark {
         display: block !important;
       }
 
       .email-logo {
         display: none !important;
+      }
+
+      .email-logo-dark-wrap {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
       }
 
       .email-logo-dark {
@@ -127,12 +139,24 @@ function renderDarkModeStyles() {
       display: none !important;
     }
 
+    [data-ogsc] .email-code-logo-dark-wrap {
+      display: block !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+
     [data-ogsc] .email-code-logo-dark {
       display: block !important;
     }
 
     [data-ogsc] .email-logo {
       display: none !important;
+    }
+
+    [data-ogsc] .email-logo-dark-wrap {
+      display: block !important;
+      max-height: none !important;
+      overflow: visible !important;
     }
 
     [data-ogsc] .email-logo-dark {
@@ -335,19 +359,19 @@ export function renderLayout({ title, previewText, body }) {
         display: none;
         width: 113.702px !important;
         height: 16px !important;
-        max-height: 0 !important;
-        max-width: 0 !important;
-        overflow: hidden !important;
-        mso-hide: all;
       }
 
       .email-logo-dark {
         display: none;
         width: 113.702px !important;
         height: 16px !important;
-        max-height: 0 !important;
-        max-width: 0 !important;
-        overflow: hidden !important;
+      }
+
+      .email-code-logo-dark-wrap,
+      .email-logo-dark-wrap {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
         mso-hide: all;
       }
 
