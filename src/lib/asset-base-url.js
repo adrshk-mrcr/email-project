@@ -1,14 +1,9 @@
 const DEFAULT_ASSET_BASE_URL = 'https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets';
+const PREVIEW_ASSET_BASE_URL = 'https://adrshk-mrcr.github.io/email-project/assets';
 
 export function assetUrl(fileName) {
   if (typeof window !== 'undefined') {
-    const baseUrl =
-      typeof import.meta !== 'undefined' &&
-      import.meta.env &&
-      import.meta.env.BASE_URL
-        ? import.meta.env.BASE_URL
-        : '/';
-    return new URL(`${baseUrl}assets/${fileName}`, window.location.origin).toString();
+    return `${PREVIEW_ASSET_BASE_URL}/${fileName}`;
   }
 
   const envBaseUrl =
