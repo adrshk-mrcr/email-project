@@ -85,10 +85,18 @@ function renderDesktop() {
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" class="email-content-table">
               <tr>
                 <td style="padding-top:24px; padding-bottom:56px;">
-                  <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
-                  <div class="email-logo-dark-wrap" style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
-                    <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
-                  </div>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr class="email-logo-light-row">
+                      <td>
+                        <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
+                      </td>
+                    </tr>
+                    <tr class="email-logo-dark-row" style="display:none; mso-hide:all;">
+                      <td>
+                        <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
               <tr>
@@ -183,10 +191,18 @@ function renderMobile() {
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-content-table" style="width:100%;">
             <tr>
               <td style="padding-top:32px; padding-bottom:56px;">
-                <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
-                <div class="email-logo-dark-wrap" style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
-                  <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
-                </div>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr class="email-logo-light-row">
+                    <td>
+                      <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
+                    </td>
+                  </tr>
+                  <tr class="email-logo-dark-row" style="display:none; mso-hide:all;">
+                    <td>
+                      <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
             <tr>

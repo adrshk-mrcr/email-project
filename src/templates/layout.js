@@ -48,31 +48,23 @@ function renderDarkModeStyles() {
         -webkit-text-fill-color: #f5efe9 !important;
       }
 
-      .email-code-logo-light {
+      .email-code-logo-light,
+      .email-logo-light-row {
         display: none !important;
       }
 
-      .email-code-logo-dark-wrap {
-        display: block !important;
-        max-height: none !important;
-        overflow: visible !important;
-      }
-
-      .email-code-logo-dark {
+      .email-code-logo-dark,
+      .email-logo-dark-row {
         display: block !important;
       }
 
-      .email-logo {
+      .email-logo,
+      .email-logo-light-row {
         display: none !important;
       }
 
-      .email-logo-dark-wrap {
-        display: block !important;
-        max-height: none !important;
-        overflow: visible !important;
-      }
-
-      .email-logo-dark {
+      .email-logo-dark,
+      .email-logo-dark-row {
         display: block !important;
       }
 
@@ -135,31 +127,23 @@ function renderDarkModeStyles() {
       -webkit-text-fill-color: #f5efe9 !important;
     }
 
-    [data-ogsc] .email-code-logo-light {
+    [data-ogsc] .email-code-logo-light,
+    [data-ogsc] .email-logo-light-row {
       display: none !important;
     }
 
-    [data-ogsc] .email-code-logo-dark-wrap {
-      display: block !important;
-      max-height: none !important;
-      overflow: visible !important;
-    }
-
-    [data-ogsc] .email-code-logo-dark {
+    [data-ogsc] .email-code-logo-dark,
+    [data-ogsc] .email-logo-dark-row {
       display: block !important;
     }
 
-    [data-ogsc] .email-logo {
+    [data-ogsc] .email-logo,
+    [data-ogsc] .email-logo-light-row {
       display: none !important;
     }
 
-    [data-ogsc] .email-logo-dark-wrap {
-      display: block !important;
-      max-height: none !important;
-      overflow: visible !important;
-    }
-
-    [data-ogsc] .email-logo-dark {
+    [data-ogsc] .email-logo-dark,
+    [data-ogsc] .email-logo-dark-row {
       display: block !important;
     }
 
@@ -367,8 +351,7 @@ export function renderLayout({ title, previewText, body }) {
         height: 16px !important;
       }
 
-      .email-code-logo-dark-wrap,
-      .email-logo-dark-wrap {
+      .email-logo-dark-row {
         display: none;
         max-height: 0;
         overflow: hidden;
