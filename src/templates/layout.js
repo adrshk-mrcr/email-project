@@ -295,7 +295,7 @@ export function renderLayout({ title, previewText, body }) {
 
       .email-logo {
         display: block;
-        width: 126px !important;
+        width: 130px !important;
         height: 28px !important;
       }
 
