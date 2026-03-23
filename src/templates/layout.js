@@ -295,8 +295,8 @@ export function renderLayout({ title, previewText, body }) {
 
       .email-logo {
         display: block;
-        width: 113.702px !important;
-        height: 16px !important;
+        width: 126px !important;
+        height: 28px !important;
       }
 
       .email-trustpilot-shell {
@@ -368,7 +368,7 @@ export function renderLayout({ title, previewText, body }) {
     <div class="email-preheader">${previewText || title}</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
-        <td align="center" class="email-page-pad" style="padding:0 16px;">
+        <td align="left" class="email-page-pad" style="padding:0 16px; text-align:left;">
           ${body}
         </td>
       </tr>
