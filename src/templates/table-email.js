@@ -83,8 +83,8 @@ function renderDesktop() {
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" class="email-content-table">
               <tr>
-                <td style="padding-top:32px; padding-bottom:48px; padding-left:8px;">
-                  <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block; width:114px; height:16px;" />
+                <td style="padding-top:32px; padding-bottom:48px; padding-left:2px;">
+                  <img src="${ASSETS.logo}" alt="mercuryo" width="126" height="28" class="email-logo" style="display:block; width:126px; height:28px;" />
                 </td>
               </tr>
               <tr>
@@ -178,8 +178,8 @@ function renderMobile() {
         <td class="email-inner email-inner-mobile">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-content-table" style="width:100%;">
             <tr>
-              <td style="padding-top:32px; padding-bottom:48px;">
-                <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block; width:114px; height:16px;" />
+              <td style="padding-top:32px; padding-bottom:48px; padding-left:2px;">
+                <img src="${ASSETS.logo}" alt="mercuryo" width="126" height="28" class="email-logo" style="display:block; width:126px; height:28px;" />
               </td>
             </tr>
             <tr>
