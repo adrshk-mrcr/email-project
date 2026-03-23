@@ -83,7 +83,7 @@ function renderDesktop() {
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" class="email-content-table">
               <tr>
-                <td style="padding-top:32px; padding-bottom:48px;">
+                <td style="padding-top:32px; padding-bottom:48px; padding-left:8px;">
                   <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block; width:114px; height:16px;" />
                 </td>
               </tr>
