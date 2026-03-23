@@ -2,8 +2,7 @@ import { renderLayout } from './layout.js';
 import { assetUrl } from '../lib/asset-base-url.js';
 
 const ASSETS = {
-  logo: assetUrl('table-logo.png'),
-  logoDark: assetUrl('table-logo-dark.png'),
+  logo: assetUrl('mercuryo-logo.png'),
   chipIcon: assetUrl('merc-foote.png'),
   linkedin: assetUrl('in-footer.png'),
   x: assetUrl('X-footer.png'),
@@ -84,19 +83,8 @@ function renderDesktop() {
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" class="email-content-table">
               <tr>
-                <td style="padding-top:24px; padding-bottom:56px;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                    <tr class="email-logo-light-row">
-                      <td>
-                        <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
-                      </td>
-                    </tr>
-                    <tr class="email-logo-dark-row" style="display:none; mso-hide:all;">
-                      <td>
-                        <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
-                      </td>
-                    </tr>
-                  </table>
+                <td style="padding-top:32px; padding-bottom:48px;">
+                  <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block; width:114px; height:16px;" />
                 </td>
               </tr>
               <tr>
@@ -190,19 +178,8 @@ function renderMobile() {
         <td class="email-inner email-inner-mobile">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-content-table" style="width:100%;">
             <tr>
-              <td style="padding-top:32px; padding-bottom:56px;">
-                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                  <tr class="email-logo-light-row">
-                    <td>
-                      <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block;" />
-                    </td>
-                  </tr>
-                  <tr class="email-logo-dark-row" style="display:none; mso-hide:all;">
-                    <td>
-                      <img src="${ASSETS.logoDark}" alt="mercuryo" width="114" height="16" class="email-logo-dark" style="display:block;" />
-                    </td>
-                  </tr>
-                </table>
+              <td style="padding-top:32px; padding-bottom:48px;">
+                <img src="${ASSETS.logo}" alt="mercuryo" width="114" height="16" class="email-logo" style="display:block; width:114px; height:16px;" />
               </td>
             </tr>
             <tr>

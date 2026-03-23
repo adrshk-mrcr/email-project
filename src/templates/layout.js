@@ -48,26 +48,6 @@ function renderDarkModeStyles() {
         -webkit-text-fill-color: #f5efe9 !important;
       }
 
-      .email-code-logo-light,
-      .email-logo-light-row {
-        display: none !important;
-      }
-
-      .email-code-logo-dark,
-      .email-logo-dark-row {
-        display: block !important;
-      }
-
-      .email-logo,
-      .email-logo-light-row {
-        display: none !important;
-      }
-
-      .email-logo-dark,
-      .email-logo-dark-row {
-        display: block !important;
-      }
-
       .email-social-icon {
         display: block !important;
       }
@@ -125,26 +105,6 @@ function renderDarkModeStyles() {
     [data-ogsc] .email-code-value {
       color: #f5efe9 !important;
       -webkit-text-fill-color: #f5efe9 !important;
-    }
-
-    [data-ogsc] .email-code-logo-light,
-    [data-ogsc] .email-logo-light-row {
-      display: none !important;
-    }
-
-    [data-ogsc] .email-code-logo-dark,
-    [data-ogsc] .email-logo-dark-row {
-      display: block !important;
-    }
-
-    [data-ogsc] .email-logo,
-    [data-ogsc] .email-logo-light-row {
-      display: none !important;
-    }
-
-    [data-ogsc] .email-logo-dark,
-    [data-ogsc] .email-logo-dark-row {
-      display: block !important;
     }
 
     [data-ogsc] .email-social-icon {
@@ -337,25 +297,6 @@ export function renderLayout({ title, previewText, body }) {
         display: block;
         width: 113.702px !important;
         height: 16px !important;
-      }
-
-      .email-code-logo-dark {
-        display: none;
-        width: 113.702px !important;
-        height: 16px !important;
-      }
-
-      .email-logo-dark {
-        display: none;
-        width: 113.702px !important;
-        height: 16px !important;
-      }
-
-      .email-logo-dark-row {
-        display: none;
-        max-height: 0;
-        overflow: hidden;
-        mso-hide: all;
       }
 
       .email-trustpilot-shell {

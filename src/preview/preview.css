@@ -204,15 +204,10 @@ select {
   text-decoration: none;
 }
 
-.email-preview .email-logo,
-.email-preview .email-logo-dark {
+.email-preview .email-logo {
   display: block;
   width: 113.702px !important;
   height: 16px !important;
-}
-
-.email-preview .email-logo-dark {
-  display: none;
 }
 
 .email-preview .email-decor-dark {
@@ -278,14 +273,6 @@ select {
 .email-preview--dark .email-button {
   background-color: #00b478 !important;
   color: #ffffff !important;
-}
-
-.email-preview--dark .email-logo {
-  display: none !important;
-}
-
-.email-preview--dark .email-logo-dark {
-  display: block !important;
 }
 
 .email-preview--dark .email-decor {
