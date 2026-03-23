@@ -5,6 +5,7 @@
   "scripts": {
     "assets:prepare": "node scripts/prepare-assets.js",
     "preview:app": "vite",
+    "preview:pages": "vite build",
     "preview:build": "node src/render-previews.js",
     "send:test": "node src/send-test.js"
   },
