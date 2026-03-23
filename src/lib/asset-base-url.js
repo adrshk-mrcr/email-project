@@ -2,7 +2,13 @@ const DEFAULT_ASSET_BASE_URL = 'https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-pr
 
 export function assetUrl(fileName) {
   if (typeof window !== 'undefined') {
-    return `/assets/${fileName}`;
+    const base =
+      typeof import.meta !== 'undefined' &&
+      import.meta.env &&
+      typeof import.meta.env.BASE_URL === 'string'
+        ? import.meta.env.BASE_URL
+        : '/';
+    return `${base.replace(/\/$/, '')}/assets/${fileName}`;
   }
 
   const envBaseUrl =
