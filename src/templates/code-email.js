@@ -6,7 +6,7 @@ const ASSETS = {
   chipIcon: assetUrl('merc-foote.png'),
   linkedin: assetUrl('in-footer.png'),
   x: assetUrl('X-footer.png'),
-  decor: assetUrl('Star.png')
+  decor: assetUrl('Star-cont.png')
 };
 
 function renderFooter({ dividerWidth }) {
@@ -76,13 +76,13 @@ function renderFooter({ dividerWidth }) {
 
 function renderDesktop(code) {
   return `
-    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell desktop-only" style="width:532px; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -6px top 2px; background-size:305px 305px; border-radius:24px; overflow:hidden;">
+    <table role="presentation" width="532" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell desktop-only" style="width:532px; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right 0 top 0; background-size:306px 306px; border-radius:24px; overflow:hidden;">
         <tr>
           <td class="email-inner">
             <table role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" class="email-content-table">
               <tr>
                 <td style="padding-top:32px; padding-bottom:48px; padding-left:2px;">
-                  <img src="${ASSETS.logo}" alt="mercuryo" width="126" height="28" class="email-logo" style="display:block; width:126px; height:28px;" />
+                  <img src="${ASSETS.logo}" alt="mercuryo" width="130" height="28" class="email-logo" style="display:block; width:130px; height:28px;" />
                 </td>
               </tr>
               <tr>
@@ -120,13 +120,13 @@ function renderDesktop(code) {
 
 function renderMobile(code) {
   return `
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell mobile-only" style="width:100%; max-width:390px; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -145px top -47px; background-size:214px 214px; border-radius:24px; overflow:hidden;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-root email-card email-shell mobile-only" style="width:100%; max-width:390px; background-image:url('${ASSETS.decor}'); background-repeat:no-repeat; background-position:right -27px top -17px; background-size:216px 216px; border-radius:24px; overflow:hidden;">
       <tr>
         <td class="email-inner email-inner-mobile">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-content-table" style="width:100%;">
             <tr>
               <td style="padding-top:32px; padding-bottom:48px; padding-left:2px;">
-                <img src="${ASSETS.logo}" alt="mercuryo" width="126" height="28" class="email-logo" style="display:block; width:126px; height:28px;" />
+                <img src="${ASSETS.logo}" alt="mercuryo" width="130" height="28" class="email-logo" style="display:block; width:130px; height:28px;" />
               </td>
             </tr>
             <tr>
