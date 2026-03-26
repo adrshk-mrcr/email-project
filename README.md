@@ -47,14 +47,76 @@ RECIPIENTS=a.shakirov@mercuryo.io node src/send-test.js
 
 ## Dark Mode
 
-The templates include:
+The current templates do not use a separate “dark HTML” version. They use one email-safe structure plus a small set of dark-mode overrides that are already implemented in [`/Users/adrshk/projects/ Codex/email-project/src/templates/layout.js`](/Users/adrshk/projects/%20Codex/email-project/src/templates/layout.js).
 
-- `meta name="color-scheme" content="light dark"`
-- `meta name="supported-color-schemes" content="light dark"`
-- `@media (prefers-color-scheme: dark)` styles
-- `[data-ogsc]` overrides for Outlook dark mode behavior
+Use this exact approach when moving the solution into real production templates.
 
-This means compatible clients can switch to the dark palette when system dark mode is enabled, while the base light version remains resilient in clients that force their own color inversion.
+### What is actually implemented
+
+- Dark-mode opt-in is enabled with:
+  - `meta name="color-scheme" content="light dark"`
+  - `meta name="supported-color-schemes" content="light dark"`
+- Dark colors are applied through:
+  - `@media (prefers-color-scheme: dark)`
+  - `[data-ogsc]` overrides for Outlook-family dark mode behavior
+- The base structure stays table-based and color-critical blocks always get explicit colors.
+
+### Real dark palette in use
+
+- Page / shell background: `#111111`
+- Surface cards and footer chips: `#2A2521`
+- Primary text: `#F5EFE9`
+- Secondary text: `#D0C6BD`
+- Links: `#8EA7FF`
+- Buttons: `#00B478`
+- Button text: `#FFFFFF`
+- Divider / inner rules: `rgba(245, 239, 233, 0.12)`
+
+### Real implementation rules we use
+
+- Keep the email layout table-based.
+  - Do not rely on `flex` or `position:absolute` in the email HTML itself.
+
+- Put dark colors on semantic roles, not on arbitrary nodes.
+  - `.email-shell` gets the page background.
+  - `.email-surface` and `.email-chip` get the dark surface fill.
+  - `.email-primary`, `.email-title`, `.email-text` get the primary text color.
+  - `.email-secondary` gets the secondary text color.
+  - `.email-link` gets the dark-mode link color.
+  - `.email-divider`, `.email-rule`, `.email-divider-line` get the dim divider color.
+
+- Keep the button color stable.
+  - The CTA stays `#00B478` in dark mode instead of being remapped to a different accent.
+
+- Force the auth code text color explicitly.
+  - `.email-code-value` uses both `color` and `-webkit-text-fill-color`.
+  - This is important because Apple Mail can otherwise darken the digits inside the code card.
+
+- Use explicit fills for chips and footer controls.
+  - Footer pills and social chips switch to the same dark surface `#2A2521`.
+  - Do not leave those backgrounds transparent in dark mode.
+
+- Keep image handling simple.
+  - We currently use one universal logo asset, not separate light/dark logo swaps.
+  - Decorative and footer images stay as PNG assets; only surrounding colors are remapped by dark-mode CSS.
+
+### What to carry into other templates
+
+- Copy the dark-mode meta tags exactly.
+- Copy the role-based class structure from `layout.js`.
+- Reuse the same dark palette values unless a template has a deliberate visual exception.
+- If a new template contains a highlighted numeric/token field like the auth code card, add the same `-webkit-text-fill-color` protection.
+- If a template adds new pills, chips, or table dividers, map them to:
+  - surface/chip background: `#2A2521`
+  - divider: `rgba(245, 239, 233, 0.12)`
+  - secondary text: `#D0C6BD`
+
+### What not to do
+
+- Do not rely on automatic client inversion for important text/background pairs.
+- Do not leave dark-mode-critical elements on inherited text color.
+- Do not introduce separate dark-only assets unless a specific client issue forces it.
+- Do not add extra dark wrappers that paint over content blocks; dark mode should be applied at the same semantic layers as in `layout.js`.
 
 ## Mobile
 
