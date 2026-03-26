@@ -377,7 +377,7 @@ Error generating stack: `+e.message+`
       </tr>
     </table>
   </body>
-</html>`}var te=`https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets`;function S(e){if(typeof window<`u`){let t=(window.location.pathname||`/`).startsWith(`/email-project/`)?`/email-project/assets`:`/assets`;return`${window.location.origin}${t}/${e}`}return`${((typeof process<`u`&&{}.ASSET_BASE_URL?{}.ASSET_BASE_URL:``)||te).replace(/\/$/,``)}/${e}`}var ne={logo:S(`mercuryo-logo.png`),chipIcon:S(`merc-foote.png`),linkedin:S(`in-footer.png`),x:S(`X-footer.png`),decor:S(`Star-cont.png`),trustpilotRating:S(`table-trustpilot-rating-raw.png?v=2`),trustpilotStar:S(`trustpilot-star-only.png?v=2`)};function re({dividerWidth:e}){return`
+</html>`}var te=`https://cdn.jsdelivr.net/gh/adrshk-mrcr/email-project@main/public/assets`;function S(e){if(typeof window<`u`){let t=(window.location.pathname||`/`).startsWith(`/email-project/`)?`/email-project/assets`:`/assets`;return`${window.location.origin}${t}/${e}`}return`${((typeof process<`u`&&{}.ASSET_BASE_URL?{}.ASSET_BASE_URL:``)||te).replace(/\/$/,``)}/${e}`}var ne={logo:S(`mercuryo-logo.png?v=20260326b`),chipIcon:S(`merc-foote.png`),linkedin:S(`in-footer.png`),x:S(`X-footer.png`),decor:S(`Star-cont.png`),trustpilotRating:S(`table-trustpilot-rating-raw.png?v=2`),trustpilotStar:S(`trustpilot-star-only.png?v=2`)};function re({dividerWidth:e}){return`
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td height="40" style="height:40px; line-height:40px; font-size:0;">&nbsp;</td>
