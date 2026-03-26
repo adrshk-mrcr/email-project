@@ -2,7 +2,7 @@ import { renderLayout } from './layout.js';
 import { assetUrl } from '../lib/asset-base-url.js';
 
 const ASSETS = {
-  logo: assetUrl('mercuryo-logo.png?v=b1765abc'),
+  logo: assetUrl('mercuryo-logo.png?v=73dc7005'),
   chipIcon: assetUrl('merc-foote.png'),
   linkedin: assetUrl('in-footer.png'),
   x: assetUrl('X-footer.png'),
